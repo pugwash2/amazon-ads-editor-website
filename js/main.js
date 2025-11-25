@@ -58,7 +58,7 @@ if (waitlistForm) {
 
         const emailInput = document.createElement('input');
         emailInput.type = 'hidden';
-        emailInput.name = 'entry.922256844';
+        emailInput.name = 'entry.1157407193';
         emailInput.value = email;
 
         googleForm.appendChild(emailInput);
