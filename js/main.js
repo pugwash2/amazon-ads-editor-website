@@ -29,11 +29,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Waitlist form handler - submits to Google Forms
+// Waitlist form handler - submits to Google Forms via hidden iframe
 const waitlistForm = document.getElementById('waitlistForm');
 
 if (waitlistForm) {
-    waitlistForm.addEventListener('submit', async (e) => {
+    // Create hidden iframe for form submission
+    const iframe = document.createElement('iframe');
+    iframe.name = 'hidden_iframe';
+    iframe.style.display = 'none';
+    document.body.appendChild(iframe);
+
+    waitlistForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
         const email = waitlistForm.querySelector('input[type="email"]').value;
@@ -44,27 +50,33 @@ if (waitlistForm) {
         btn.textContent = 'Joining...';
         btn.disabled = true;
 
-        // Google Form submission URL
-        const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLScXgqv7fOPr8STHRkmsG2jgtWXNVKwovtKl1ZT74qK6tF5aSA/formResponse';
+        // Create a temporary form to submit to Google Forms
+        const googleForm = document.createElement('form');
+        googleForm.action = 'https://docs.google.com/forms/d/e/1FAIpQLScXgqv7fOPr8STHRkmsG2jgtWXNVKwovtKl1ZT74qK6tF5aSA/formResponse';
+        googleForm.method = 'POST';
+        googleForm.target = 'hidden_iframe';
 
-        // Create form data
-        const formData = new FormData();
-        formData.append('entry.922256844', email);
+        const emailInput = document.createElement('input');
+        emailInput.type = 'hidden';
+        emailInput.name = 'entry.922256844';
+        emailInput.value = email;
 
-        try {
-            // Submit to Google Forms (no-cors mode - we won't get a response)
-            await fetch(formUrl, {
-                method: 'POST',
-                body: formData,
-                mode: 'no-cors'
-            });
+        googleForm.appendChild(emailInput);
+        document.body.appendChild(googleForm);
 
-            // Show success
+        // Submit the form
+        googleForm.submit();
+
+        // Show success immediately (since iframe submission doesn't give us feedback)
+        setTimeout(() => {
             btn.textContent = 'Joined! ✓';
             btn.style.background = '#00ffa3';
 
             // Reset form
             waitlistForm.reset();
+
+            // Clean up temporary form
+            document.body.removeChild(googleForm);
 
             // Reset button after 3 seconds
             setTimeout(() => {
@@ -72,21 +84,7 @@ if (waitlistForm) {
                 btn.disabled = false;
                 btn.style.background = '';
             }, 3000);
-
-        } catch (error) {
-            // Even if fetch fails, Google Forms likely received it
-            // Show success anyway (no-cors mode doesn't allow error checking)
-            btn.textContent = 'Joined! ✓';
-            btn.style.background = '#00ffa3';
-
-            waitlistForm.reset();
-
-            setTimeout(() => {
-                btn.textContent = originalText;
-                btn.disabled = false;
-                btn.style.background = '';
-            }, 3000);
-        }
+        }, 500);
     });
 }
 
