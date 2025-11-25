@@ -29,11 +29,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Waitlist form handler - submits to Google Forms via image pixel
+// Waitlist form handler - submits via Vercel serverless function
 const waitlistForm = document.getElementById('waitlistForm');
 
 if (waitlistForm) {
-    waitlistForm.addEventListener('submit', (e) => {
+    waitlistForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
         const emailInput = document.getElementById('emailInput');
@@ -45,25 +45,38 @@ if (waitlistForm) {
         btn.textContent = 'Joining...';
         btn.disabled = true;
 
-        // Submit via image pixel to bypass CORS
-        const img = new Image();
-        img.src = `https://docs.google.com/forms/d/e/1FAIpQLScXgqv7fOPr8STHRkmsG2jgtWXNVKwovtKl1ZT74qK6tF5aSA/formResponse?entry.1157407193=${encodeURIComponent(email)}&submit=Submit`;
+        try {
+            // Submit to our serverless function
+            const response = await fetch('/api/waitlist', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email }),
+            });
 
-        // Show success feedback
+            if (response.ok) {
+                // Success
+                btn.textContent = 'Joined! ✓';
+                btn.style.background = '#00ffa3';
+                waitlistForm.reset();
+            } else {
+                // Error
+                btn.textContent = 'Error - Try Again';
+                btn.style.background = '#ff4444';
+            }
+        } catch (error) {
+            // Network error
+            btn.textContent = 'Error - Try Again';
+            btn.style.background = '#ff4444';
+        }
+
+        // Reset button after 3 seconds
         setTimeout(() => {
-            btn.textContent = 'Joined! ✓';
-            btn.style.background = '#00ffa3';
-
-            // Reset form
-            waitlistForm.reset();
-
-            // Reset button after 3 seconds
-            setTimeout(() => {
-                btn.textContent = originalText;
-                btn.disabled = false;
-                btn.style.background = '';
-            }, 3000);
-        }, 500);
+            btn.textContent = originalText;
+            btn.disabled = false;
+            btn.style.background = '';
+        }, 3000);
     });
 }
 
