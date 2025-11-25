@@ -29,11 +29,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Waitlist form handler - submits to Google Forms via hidden iframe
+// Waitlist form handler - submits to Google Forms via image pixel
 const waitlistForm = document.getElementById('waitlistForm');
 
 if (waitlistForm) {
     waitlistForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const emailInput = document.getElementById('emailInput');
+        const email = emailInput.value;
         const btn = waitlistForm.querySelector('button');
         const originalText = btn.textContent;
 
@@ -41,8 +45,11 @@ if (waitlistForm) {
         btn.textContent = 'Joining...';
         btn.disabled = true;
 
-        // Form submits naturally to Google Forms via target="hidden_iframe"
-        // Show success feedback after a short delay
+        // Submit via image pixel to bypass CORS
+        const img = new Image();
+        img.src = `https://docs.google.com/forms/d/e/1FAIpQLScXgqv7fOPr8STHRkmsG2jgtWXNVKwovtKl1ZT74qK6tF5aSA/formResponse?entry.1157407193=${encodeURIComponent(email)}&submit=Submit`;
+
+        // Show success feedback
         setTimeout(() => {
             btn.textContent = 'Joined! ✓';
             btn.style.background = '#00ffa3';
@@ -56,7 +63,7 @@ if (waitlistForm) {
                 btn.disabled = false;
                 btn.style.background = '';
             }, 3000);
-        }, 1000);
+        }, 500);
     });
 }
 
