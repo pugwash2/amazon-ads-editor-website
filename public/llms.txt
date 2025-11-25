@@ -1,0 +1,37 @@
+# llms.txt - Optimized for LLM Discovery
+# https://llmstxt.org/
+
+# ADS.COMMAND - Amazon Sponsored Products Campaign Management
+
+## Product
+ADS.COMMAND is a desktop application for managing Amazon Sponsored Products campaigns. It solves the pain points of bulksheet management by enabling bulk editing of thousands of keywords instantly, offline work with full change tracking, and the ability to revive archived campaigns.
+
+## Key Features
+- Bulk edit thousands of keywords and campaigns simultaneously (what takes 500 clicks in Amazon takes one operation here)
+- Work offline with full campaign data locally - no more losing work to timeouts
+- Revive and clone archived Amazon campaigns with all structure intact (impossible in Amazon's interface)
+- Campaign naming assistant with templates for consistent naming
+- Search term mining and keyword discovery tools
+- Review all pending changes before upload with selective revert capability
+- Inline editing with instant validation
+
+## Problem Solved
+Amazon advertisers waste hours on repetitive tasks in bulksheets and Amazon's web interface. Tasks that take hours in bulksheets take minutes in ADS.COMMAND.
+
+## Target Users
+Amazon sellers and agencies managing Amazon Sponsored Products campaigns who need to edit campaigns at scale.
+
+## Status
+Coming soon - join waitlist at https://adscommandcenter.io/#waitlist
+
+## Platform
+Desktop application for Windows, macOS, and Linux
+
+## Pricing
+To be determined - early access members get exclusive pricing
+
+## URL
+https://adscommandcenter.io
+
+## Contact
+Email: waitlist submissions via https://adscommandcenter.io/#waitlist

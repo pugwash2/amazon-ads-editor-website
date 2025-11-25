@@ -2,24 +2,43 @@
 User-agent: *
 Allow: /
 
-# Specific AI crawlers
+# OpenAI crawlers (ChatGPT)
 User-agent: GPTBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
-User-agent: Claude-Web
+User-agent: OAI-SearchBot
 Allow: /
 
-User-agent: CCBot
+# Anthropic crawlers (Claude)
+User-agent: Claude-Web
 Allow: /
 
 User-agent: anthropic-ai
 Allow: /
 
+# Google crawlers (Gemini/Bard)
 User-agent: Google-Extended
 Allow: /
 
-# Sitemap location
+User-agent: Googlebot
+Allow: /
+
+# Bing (critical for ChatGPT search)
+User-agent: Bingbot
+Allow: /
+
+# Other AI crawlers
+User-agent: CCBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+# Sitemap and LLMs.txt
 Sitemap: https://adscommandcenter.io/sitemap.xml
