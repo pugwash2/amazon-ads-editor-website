@@ -67,7 +67,7 @@ if (waitlistForm) {
         // Submit the form
         googleForm.submit();
 
-        // Show success immediately (since iframe submission doesn't give us feedback)
+        // Show success after giving form time to submit
         setTimeout(() => {
             btn.textContent = 'Joined! ✓';
             btn.style.background = '#00ffa3';
@@ -75,8 +75,10 @@ if (waitlistForm) {
             // Reset form
             waitlistForm.reset();
 
-            // Clean up temporary form
-            document.body.removeChild(googleForm);
+            // Clean up temporary form after submission completes
+            setTimeout(() => {
+                document.body.removeChild(googleForm);
+            }, 2000);
 
             // Reset button after 3 seconds
             setTimeout(() => {
@@ -84,7 +86,7 @@ if (waitlistForm) {
                 btn.disabled = false;
                 btn.style.background = '';
             }, 3000);
-        }, 500);
+        }, 1000);
     });
 }
 
