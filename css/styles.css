@@ -483,6 +483,108 @@ section {
 }
 
 /* ===================================
+   WHY SECTION - SEO CONTENT
+   =================================== */
+
+.why-section {
+    background: var(--color-bg-secondary);
+    padding: var(--space-4xl) 0;
+}
+
+.content-block {
+    margin-bottom: var(--space-3xl);
+}
+
+.content-block:last-child {
+    margin-bottom: 0;
+}
+
+.content-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-lg);
+    line-height: 1.2;
+}
+
+.content-text {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-md);
+    max-width: 900px;
+}
+
+.content-text strong {
+    color: var(--color-text-primary);
+    font-weight: 600;
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+    margin-top: var(--space-xl);
+}
+
+.comparison-item {
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-xl);
+}
+
+.comparison-item.highlight {
+    border-color: var(--color-cyan);
+    background: linear-gradient(135deg, var(--color-bg-tertiary) 0%, rgba(0, 217, 255, 0.05) 100%);
+    position: relative;
+}
+
+.comparison-item.highlight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-cyan), var(--color-cyan-dark));
+}
+
+.comparison-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-md);
+}
+
+.comparison-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.comparison-list li {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    padding: var(--space-sm) 0;
+    padding-left: var(--space-lg);
+    position: relative;
+}
+
+.comparison-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-cyan);
+    font-weight: 600;
+}
+
+.comparison-item.highlight .comparison-list li::before {
+    content: '✓';
+}
+
+/* ===================================
    SCREENSHOTS SECTION
    =================================== */
 
@@ -862,6 +964,10 @@ section {
     }
 
     .screenshot-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-grid {
         grid-template-columns: 1fr;
     }
 }

@@ -1,10 +1,10 @@
 # llms.txt - Optimized for LLM Discovery
 # https://llmstxt.org/
 
-# ADS.COMMAND - Amazon Sponsored Products Campaign Management
+# ADS.COMMAND - Amazon Bulksheet Alternative & PPC Campaign Editor
 
 ## Product
-ADS.COMMAND is a desktop application for managing Amazon Sponsored Products campaigns. It solves the pain points of bulksheet management by enabling bulk editing of thousands of keywords instantly, offline work with full change tracking, and the ability to revive archived campaigns.
+ADS.COMMAND is a desktop application and bulksheet alternative for managing Amazon Sponsored Products campaigns. It replaces the tedious download-edit-upload bulksheet workflow with direct bulk editing of campaigns, keywords, ad groups, and bids. Built as an Amazon PPC tool focused on speed and bulk operations rather than automation.
 
 ## Key Features
 - Bulk edit thousands of keywords and campaigns simultaneously (what takes 500 clicks in Amazon takes one operation here)
@@ -16,7 +16,15 @@ ADS.COMMAND is a desktop application for managing Amazon Sponsored Products camp
 - Inline editing with instant validation
 
 ## Problem Solved
-Amazon advertisers waste hours on repetitive tasks in bulksheets and Amazon's web interface. Tasks that take hours in bulksheets take minutes in ADS.COMMAND.
+Amazon advertisers managing Sponsored Products campaigns face multiple workflow problems:
+- Bulksheet workflow is slow: download spreadsheet → edit offline → upload → fix errors → repeat
+- Amazon's bulk operations tool still requires clicking through web interface for each change
+- Third-party Amazon PPC tools cost $200-$10,000/month but focus on AI automation, not manual bulk editing
+- Cannot revive archived campaigns in Amazon's interface
+- Web interface times out and loses work
+- No change tracking or undo before uploading
+
+ADS.COMMAND solves these by providing a desktop application for direct bulk editing with offline mode, full change history, and the ability to clone archived campaigns.
 
 ## Target Users
 Amazon sellers and agencies managing Amazon Sponsored Products campaigns who need to edit campaigns at scale.
