@@ -767,6 +767,61 @@ section {
    RESPONSIVE
    =================================== */
 
+/* Image Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 95%;
+    max-height: 95vh;
+    object-fit: contain;
+    box-shadow: 0 0 50px rgba(0, 217, 255, 0.3);
+    border-radius: 8px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: var(--color-text-primary);
+    font-size: 40px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: color 0.2s;
+    user-select: none;
+}
+
+.lightbox-close:hover {
+    color: var(--color-cyan);
+}
+
+/* Make screenshots clickable */
+.screenshot-img,
+.screenshot-frame img {
+    cursor: zoom-in;
+    transition: transform 0.2s;
+}
+
+.screenshot-img:hover,
+.screenshot-frame img:hover {
+    transform: scale(1.02);
+}
+
 @media (max-width: 1024px) {
     .features-grid {
         grid-template-columns: repeat(2, 1fr);
