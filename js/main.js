@@ -33,16 +33,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const waitlistForm = document.getElementById('waitlistForm');
 
 if (waitlistForm) {
-    // Create hidden iframe for form submission
-    const iframe = document.createElement('iframe');
-    iframe.name = 'hidden_iframe';
-    iframe.style.display = 'none';
-    document.body.appendChild(iframe);
-
     waitlistForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        const email = waitlistForm.querySelector('input[type="email"]').value;
         const btn = waitlistForm.querySelector('button');
         const originalText = btn.textContent;
 
@@ -50,35 +41,14 @@ if (waitlistForm) {
         btn.textContent = 'Joining...';
         btn.disabled = true;
 
-        // Create a temporary form to submit to Google Forms
-        const googleForm = document.createElement('form');
-        googleForm.action = 'https://docs.google.com/forms/d/e/1FAIpQLScXgqv7fOPr8STHRkmsG2jgtWXNVKwovtKl1ZT74qK6tF5aSA/formResponse';
-        googleForm.method = 'POST';
-        googleForm.target = 'hidden_iframe';
-
-        const emailInput = document.createElement('input');
-        emailInput.type = 'hidden';
-        emailInput.name = 'entry.1157407193';
-        emailInput.value = email;
-
-        googleForm.appendChild(emailInput);
-        document.body.appendChild(googleForm);
-
-        // Submit the form
-        googleForm.submit();
-
-        // Show success after giving form time to submit
+        // Form submits naturally to Google Forms via target="hidden_iframe"
+        // Show success feedback after a short delay
         setTimeout(() => {
             btn.textContent = 'Joined! ✓';
             btn.style.background = '#00ffa3';
 
             // Reset form
             waitlistForm.reset();
-
-            // Clean up temporary form after submission completes
-            setTimeout(() => {
-                document.body.removeChild(googleForm);
-            }, 2000);
 
             // Reset button after 3 seconds
             setTimeout(() => {
