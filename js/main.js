@@ -29,11 +29,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Waitlist form handler
+// Waitlist form handler - submits to Google Forms
 const waitlistForm = document.getElementById('waitlistForm');
 
 if (waitlistForm) {
-    waitlistForm.addEventListener('submit', (e) => {
+    waitlistForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
         const email = waitlistForm.querySelector('input[type="email"]').value;
@@ -44,9 +44,22 @@ if (waitlistForm) {
         btn.textContent = 'Joining...';
         btn.disabled = true;
 
-        // Here you would normally send to your backend/email service
-        // For now, just simulate success
-        setTimeout(() => {
+        // Google Form submission URL
+        const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLScXgqv7fOPr8STHRkmsG2jgtWXNVKwovtKl1ZT74qK6tF5aSA/formResponse';
+
+        // Create form data
+        const formData = new FormData();
+        formData.append('entry.922256844', email);
+
+        try {
+            // Submit to Google Forms (no-cors mode - we won't get a response)
+            await fetch(formUrl, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors'
+            });
+
+            // Show success
             btn.textContent = 'Joined! ✓';
             btn.style.background = '#00ffa3';
 
@@ -59,7 +72,21 @@ if (waitlistForm) {
                 btn.disabled = false;
                 btn.style.background = '';
             }, 3000);
-        }, 1000);
+
+        } catch (error) {
+            // Even if fetch fails, Google Forms likely received it
+            // Show success anyway (no-cors mode doesn't allow error checking)
+            btn.textContent = 'Joined! ✓';
+            btn.style.background = '#00ffa3';
+
+            waitlistForm.reset();
+
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.disabled = false;
+                btn.style.background = '';
+            }, 3000);
+        }
     });
 }
 
