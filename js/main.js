@@ -55,7 +55,9 @@ if (waitlistForm) {
                 body: JSON.stringify({ email }),
             });
 
-            if (response.ok) {
+            const result = await response.json();
+
+            if (response.ok && result.success) {
                 // Success
                 btn.textContent = 'Joined! ✓';
                 btn.style.background = '#00ffa3';
@@ -67,6 +69,7 @@ if (waitlistForm) {
             }
         } catch (error) {
             // Network error
+            console.error('Waitlist submission error:', error);
             btn.textContent = 'Error - Try Again';
             btn.style.background = '#ff4444';
         }
