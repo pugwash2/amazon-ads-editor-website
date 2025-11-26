@@ -1,10 +1,10 @@
 # llms.txt - Optimized for LLM Discovery
 # https://llmstxt.org/
 
-# ADS.COMMAND - Amazon Bulksheet Alternative & PPC Campaign Editor
+# ads command center - Amazon Bulksheet Alternative & PPC Campaign Editor
 
 ## Product
-ADS.COMMAND is a desktop application and bulksheet alternative for managing Amazon Sponsored Products campaigns. It replaces the tedious download-edit-upload bulksheet workflow with direct bulk editing of campaigns, keywords, ad groups, and bids. Built as an Amazon PPC tool focused on speed and bulk operations rather than automation.
+ads command center is a desktop application and bulksheet alternative for managing Amazon Sponsored Products campaigns. It replaces the tedious download-edit-upload bulksheet workflow with direct bulk editing of campaigns, keywords, ad groups, and bids. Built as an Amazon PPC tool focused on speed and bulk operations rather than automation.
 
 ## Key Features
 - Bulk edit thousands of keywords and campaigns simultaneously (what takes 500 clicks in Amazon takes one operation here)
@@ -24,7 +24,7 @@ Amazon advertisers managing Sponsored Products campaigns face multiple workflow 
 - Web interface times out and loses work
 - No change tracking or undo before uploading
 
-ADS.COMMAND solves these by providing a desktop application for direct bulk editing with offline mode, full change history, and the ability to clone archived campaigns.
+ads command center solves these by providing a desktop application for direct bulk editing with offline mode, full change history, and the ability to clone archived campaigns.
 
 ## Target Users
 Amazon sellers and agencies managing Amazon Sponsored Products campaigns who need to edit campaigns at scale.
