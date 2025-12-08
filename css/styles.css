@@ -1112,3 +1112,144 @@ section {
         height: 150px;
     }
 }
+
+/* ===================================
+   HOW IT WORKS SECTION
+   =================================== */
+
+.how-it-works {
+    padding: var(--space-4xl) 0;
+    background: var(--color-bg-secondary);
+}
+
+.workflow-steps {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.workflow-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 180px;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-cyan), var(--color-cyan-dark));
+    color: var(--color-bg-primary);
+    font-size: 24px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--space-md);
+    box-shadow: 0 4px 20px rgba(0, 217, 255, 0.3);
+}
+
+.step-content {
+    padding: 0 var(--space-sm);
+}
+
+.step-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-sm);
+}
+
+.step-description {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+.workflow-connector {
+    width: 40px;
+    height: 2px;
+    background: var(--color-border-bright);
+    margin-top: 30px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+    .workflow-steps {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-lg);
+    }
+
+    .workflow-step {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .workflow-connector {
+        width: 2px;
+        height: 30px;
+        margin-top: 0;
+    }
+}
+
+/* ===================================
+   FOOTER ENHANCEMENTS
+   =================================== */
+
+.footer-company {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+}
+
+.footer-company p {
+    color: var(--color-text-secondary);
+    margin: var(--space-xs) 0;
+    font-size: 14px;
+}
+
+.footer-company a {
+    color: var(--color-cyan);
+    text-decoration: none;
+}
+
+.footer-company a:hover {
+    text-decoration: underline;
+}
+
+.footer-disclaimer {
+    text-align: center;
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-border);
+}
+
+.footer-disclaimer p {
+    color: var(--color-text-tertiary);
+    font-size: 13px;
+    margin: var(--space-xs) 0;
+}
+
+.amazon-disclaimer {
+    font-size: 12px !important;
+    max-width: 600px;
+    margin: var(--space-sm) auto 0 !important;
+    line-height: 1.5;
+}
+
+/* ===================================
+   SCREENSHOT CAPTION
+   =================================== */
+
+.screenshot-caption {
+    text-align: center;
+    color: var(--color-text-tertiary);
+    font-size: 13px;
+    margin-top: var(--space-md);
+    font-style: italic;
+}
