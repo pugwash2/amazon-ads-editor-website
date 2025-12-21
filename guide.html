@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Guide to ads command center | Amazon Ads Bulk Editor</title>
+    <meta name="description" content="Learn how to use ads command center to bulk edit Amazon Sponsored Products campaigns. Step-by-step guide covering campaign management, keyword editing, bid optimization, and more.">
+    <meta name="keywords" content="Amazon ads editor guide, bulk edit Amazon campaigns, Amazon PPC tutorial, Sponsored Products management, Amazon advertising tool guide, campaign bulk editing tutorial">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Complete Guide to ads command center | Amazon Ads Bulk Editor">
+    <meta property="og:description" content="Step-by-step guide to bulk editing Amazon Sponsored Products campaigns. Learn campaign management, keyword editing, and advanced features.">
+    <meta property="og:url" content="https://adscommandcenter.io/guide.html">
+    <meta property="og:site_name" content="ads command center">
+    <meta property="og:image" content="https://adscommandcenter.io/images/hero-main.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Complete Guide to ads command center">
+    <meta name="twitter:description" content="Step-by-step guide to bulk editing Amazon Sponsored Products campaigns.">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://adscommandcenter.io/guide.html">
+
+    <!-- Structured Data - How-To Guide -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Use ads command center for Amazon Campaign Management",
+      "description": "Complete guide to using ads command center for bulk editing Amazon Sponsored Products, Sponsored Brands, and Sponsored Display campaigns.",
+      "image": "https://adscommandcenter.io/images/hero-main.png",
+      "totalTime": "PT30M",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Connect Your Amazon Account",
+          "text": "Link your Amazon Advertising account securely via OAuth. Navigate to the connection button and authorize access.",
+          "position": 1
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Download Campaign Data",
+          "text": "Click the Download button to pull all campaigns, ad groups, keywords, and targets to your local machine.",
+          "position": 2
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Navigate and Select Entities",
+          "text": "Use the Entity Tree sidebar to browse portfolios, campaigns, and ad groups. Click to select and view details.",
+          "position": 3
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Bulk Edit with the Grid",
+          "text": "Select multiple rows in the grid and edit fields like bids, status, and names. Changes are tracked automatically.",
+          "position": 4
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Review and Upload Changes",
+          "text": "Review all pending changes in the Changes Panel. Revert individual edits or upload all changes to Amazon.",
+          "position": 5
+        }
+      ]
+    }
+    </script>
+
+    <!-- Structured Data - Article -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Complete Guide to ads command center",
+      "description": "Learn how to use ads command center to bulk edit Amazon Sponsored Products campaigns efficiently.",
+      "author": {
+        "@type": "Organization",
+        "name": "Ads Command Center LLC"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Ads Command Center LLC",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://adscommandcenter.io/images/hero-main.png"
+        }
+      },
+      "datePublished": "2025-01-01",
+      "dateModified": "2025-12-20"
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/guide.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="nav-brand">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">ads command center</span>
+            </a>
+            <div class="nav-links">
+                <a href="/#features">Features</a>
+                <a href="/guide.html" class="active">Guide</a>
+                <a href="/#pricing">Pricing</a>
+                <a href="/#waitlist" class="btn-primary-nav">Join Waitlist</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Guide Hero -->
+    <section class="guide-hero">
+        <div class="container">
+            <div class="guide-hero-content">
+                <h1 class="guide-title">Complete User Guide</h1>
+                <p class="guide-subtitle">Everything you need to know to master Amazon campaign management with ads command center</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Statement Section - SEO focused -->
+    <section class="problem-section">
+        <div class="container">
+            <div class="problem-grid">
+                <div class="problem-column pain">
+                    <h2>The Bulk Sheet Nightmare</h2>
+                    <ul class="pain-list">
+                        <li><strong>Download, edit, upload, repeat</strong> — Amazon's bulk sheets force you into a tedious 3-step loop for every single change</li>
+                        <li><strong>One mistake breaks everything</strong> — A wrong column header, a malformed ID, or an extra comma corrupts the entire upload</li>
+                        <li><strong>No visual hierarchy</strong> — Staring at 50 columns and thousands of rows trying to find what you need is exhausting</li>
+                        <li><strong>Campaign types require different sheets</strong> — SP, SB, and SD each have their own bulk sheet format with different columns</li>
+                        <li><strong>No undo button</strong> — Upload the wrong file? Hope you saved a backup. Amazon doesn't let you revert.</li>
+                        <li><strong>IDs everywhere, names nowhere</strong> — Bulk sheets reference campaigns by cryptic IDs, not the names you actually recognize</li>
+                        <li><strong>Cross-account management is impossible</strong> — Want to copy a campaign structure to another marketplace? Good luck recreating it manually.</li>
+                        <li><strong>No context while editing</strong> — You can't see the campaign hierarchy, parent ad groups, or related entities while making changes</li>
+                    </ul>
+                </div>
+                <div class="problem-column solution">
+                    <h2>The ads command center Way</h2>
+                    <ul class="solution-list">
+                        <li><strong>Edit directly, see changes instantly</strong> — Click on any field and change it. No downloads, no uploads, no waiting.</li>
+                        <li><strong>Visual campaign hierarchy</strong> — See portfolios, campaigns, and ad groups in a tree structure that actually makes sense</li>
+                        <li><strong>All campaign types, one interface</strong> — SP, SB, SD, and STV campaigns all work the same way. No format switching.</li>
+                        <li><strong>Full undo/redo support</strong> — Made a mistake? Ctrl+Z. Review all pending changes before uploading anything.</li>
+                        <li><strong>Names you recognize</strong> — Work with campaign names, not IDs. The grid shows you what you need to know.</li>
+                        <li><strong>Cross-account copy tool</strong> — Clone entire campaign structures across profiles or marketplaces with currency conversion built-in</li>
+                        <li><strong>Context everywhere</strong> — Select a keyword and see which ad group and campaign it belongs to. Navigate instantly.</li>
+                        <li><strong>Bulk select and edit</strong> — Change 500 keyword bids in one action. Multi-select with Shift+Click or Ctrl+Click.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="seo-callout">
+                <h3>Stop Fighting Spreadsheets. Start Managing Campaigns.</h3>
+                <p>ads command center replaces the tedious bulk sheet workflow with a visual editor designed for Amazon PPC managers. Import your campaigns once, then edit them like a native desktop app — with full offline support and smart change tracking.</p>
+                <a href="/#waitlist" class="btn-primary">Join the Waitlist →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Table of Contents -->
+    <section class="toc-section">
+        <div class="container">
+            <div class="toc-wrapper">
+                <h2 class="toc-title">Table of Contents</h2>
+                <nav class="toc-nav">
+                    <ol class="toc-list">
+                        <li><a href="#getting-started">Getting Started</a>
+                            <ol>
+                                <li><a href="#connecting-account">Connecting Your Amazon Account</a></li>
+                                <li><a href="#interface-overview">Interface Overview</a></li>
+                                <li><a href="#downloading-data">Downloading Campaign Data</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#navigation">Navigation & Entity Tree</a>
+                            <ol>
+                                <li><a href="#portfolios">Managing Portfolios</a></li>
+                                <li><a href="#campaigns">Browsing Campaigns</a></li>
+                                <li><a href="#ad-groups">Working with Ad Groups</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#editing">Bulk Editing</a>
+                            <ol>
+                                <li><a href="#grid-editing">Grid Selection & Editing</a></li>
+                                <li><a href="#inline-editing">Inline Field Editing</a></li>
+                                <li><a href="#details-panel">Details Panel Editing</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#campaign-types">Campaign Types</a>
+                            <ol>
+                                <li><a href="#sponsored-products">Sponsored Products (SP)</a></li>
+                                <li><a href="#sponsored-brands">Sponsored Brands (SB)</a></li>
+                                <li><a href="#sponsored-display">Sponsored Display (SD)</a></li>
+                                <li><a href="#streaming-tv">Streaming TV (STV)</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#tools">Productivity Tools</a>
+                            <ol>
+                                <li><a href="#naming-assistant">Naming Assistant</a></li>
+                                <li><a href="#account-copy">Account Copy Tool</a></li>
+                                <li><a href="#duplicate-clone">Duplicate & Clone</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#changes">Managing Changes</a>
+                            <ol>
+                                <li><a href="#pending-changes">Pending Changes Panel</a></li>
+                                <li><a href="#reverting">Reverting Changes</a></li>
+                                <li><a href="#uploading">Uploading to Amazon</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#advanced">Advanced Features</a>
+                            <ol>
+                                <li><a href="#audiences">Audiences & Targeting</a></li>
+                                <li><a href="#revive-archived">Reviving Archived Campaigns</a></li>
+                                <li><a href="#keyboard-shortcuts">Keyboard Shortcuts</a></li>
+                            </ol>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Guide Content -->
+    <main class="guide-content">
+        <div class="container">
+            <div class="guide-layout">
+                <!-- Sticky sidebar for desktop -->
+                <aside class="guide-sidebar" id="guideSidebar">
+                    <div class="sidebar-sticky">
+                        <h3>On This Page</h3>
+                        <ul class="sidebar-links" id="sidebarLinks">
+                            <!-- Populated by JS -->
+                        </ul>
+                    </div>
+                </aside>
+
+                <!-- Main content -->
+                <article class="guide-main">
+
+                    <!-- Getting Started -->
+                    <section id="getting-started" class="guide-section">
+                        <h2>Getting Started</h2>
+                        <p class="section-intro">Get up and running with ads command center in minutes. This section covers the initial setup and basic interface orientation.</p>
+
+                        <div id="connecting-account" class="guide-subsection">
+                            <h3>Connecting Your Amazon Account</h3>
+                            <p>To use ads command center, you'll need to connect your Amazon Advertising account. This is done securely through Amazon's official OAuth system.</p>
+
+                            <div class="steps-container">
+                                <div class="step-item">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Click the Connection Status</h4>
+                                        <p>In the top header bar, you'll see a connection indicator showing "DISCONNECTED" or "CONNECTED". Click on this area to open the connection dialog.</p>
+                                    </div>
+                                </div>
+                                <div class="step-item">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Authorize with Amazon</h4>
+                                        <p>A browser window will open to Amazon's login page. Sign in with your Amazon Advertising credentials and authorize ads command center to access your campaigns.</p>
+                                    </div>
+                                </div>
+                                <div class="step-item">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Select Your Profile</h4>
+                                        <p>After authorization, click on the profile dropdown (showing your account name) to select which advertising profile you want to work with. You may have multiple profiles for different marketplaces or accounts.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tip-box">
+                                <div class="tip-icon">💡</div>
+                                <div class="tip-content">
+                                    <strong>Tip:</strong> ads command center supports multiple regions including NA (US, CA, MX, BR), EU (UK, DE, FR, IT, ES, NL, SE, PL, BE), and FE (JP, AU, SG, IN).
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="interface-overview" class="guide-subsection">
+                            <h3>Interface Overview</h3>
+                            <p>The ads command center interface is divided into several key areas designed for efficient campaign management:</p>
+
+                            <div class="interface-diagram">
+                                <div class="interface-area">
+                                    <span class="area-label">Header Bar</span>
+                                    <p>Contains the logo, profile selector, connection status, pending changes counter, and action buttons (Download/Upload).</p>
+                                </div>
+                                <div class="interface-area">
+                                    <span class="area-label">Entity Tree (Left Sidebar)</span>
+                                    <p>Hierarchical navigation through Portfolios, Campaigns, Audiences, Advertised Products, and Targeted Keywords.</p>
+                                </div>
+                                <div class="interface-area">
+                                    <span class="area-label">Main Grid (Center)</span>
+                                    <p>Data grid showing entities based on your current selection. Supports sorting, filtering, multi-select, and inline editing.</p>
+                                </div>
+                                <div class="interface-area">
+                                    <span class="area-label">Details Panel (Right)</span>
+                                    <p>Shows detailed information and editable fields for the selected entity. Collapsible to maximize grid space.</p>
+                                </div>
+                                <div class="interface-area">
+                                    <span class="area-label">Pending Changes (Bottom)</span>
+                                    <p>Expandable panel showing all uncommitted changes. Review, revert, or upload changes from here.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="downloading-data" class="guide-subsection">
+                            <h3>Downloading Campaign Data</h3>
+                            <p>Before you can edit campaigns, you need to download your data from Amazon.</p>
+
+                            <div class="steps-container">
+                                <div class="step-item">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Click the Download Button</h4>
+                                        <p>Located in the top-right header, the <strong>↓ DOWNLOAD</strong> button initiates a full data sync from Amazon.</p>
+                                    </div>
+                                </div>
+                                <div class="step-item">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Wait for Sync to Complete</h4>
+                                        <p>The app will fetch all campaigns, ad groups, keywords, product ads, and targeting data. Progress is shown in the header. This typically takes 10-60 seconds depending on account size.</p>
+                                    </div>
+                                </div>
+                                <div class="step-item">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Data is Stored Locally</h4>
+                                        <p>Once downloaded, all data is stored on your computer. You can work offline and changes are tracked until you upload them.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="warning-box">
+                                <div class="warning-icon">⚠️</div>
+                                <div class="warning-content">
+                                    <strong>Important:</strong> Downloading will refresh your local data. Any pending changes will be preserved, but if you've made changes to entities that were also modified in Amazon, you'll see the Amazon version.
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Navigation -->
+                    <section id="navigation" class="guide-section">
+                        <h2>Navigation & Entity Tree</h2>
+                        <p class="section-intro">The Entity Tree sidebar is your primary navigation tool. It provides a hierarchical view of all your advertising entities.</p>
+
+                        <div id="portfolios" class="guide-subsection">
+                            <h3>Managing Portfolios</h3>
+                            <p>Portfolios are containers for organizing campaigns by theme, product line, or any grouping that makes sense for your business.</p>
+
+                            <h4>Viewing Portfolios</h4>
+                            <ol class="numbered-list">
+                                <li>Click the <strong>PORTFOLIOS</strong> section header in the Entity Tree to expand it</li>
+                                <li>You'll see all portfolios with their names and a count of contained campaigns</li>
+                                <li>Click on any portfolio to view its campaigns in the main grid</li>
+                            </ol>
+
+                            <h4>Creating a New Portfolio</h4>
+                            <ol class="numbered-list">
+                                <li>Expand the PORTFOLIOS section</li>
+                                <li>Click <strong>+ Create Portfolio</strong></li>
+                                <li>Enter a name for your portfolio</li>
+                                <li>The portfolio is created and synced on next upload</li>
+                            </ol>
+
+                            <h4>Assigning Campaigns to Portfolios</h4>
+                            <p>You can assign campaigns to portfolios using drag-and-drop:</p>
+                            <ol class="numbered-list">
+                                <li>Expand both PORTFOLIOS and CAMPAIGNS sections</li>
+                                <li>Click and drag a campaign from the Campaigns list</li>
+                                <li>Drop it onto the target portfolio</li>
+                                <li>A notification confirms the assignment</li>
+                            </ol>
+
+                            <h4>Editing Portfolio Budget</h4>
+                            <ol class="numbered-list">
+                                <li>Click on a portfolio to select it</li>
+                                <li>In the Details Panel, find the <strong>Budget</strong> section</li>
+                                <li>Click on Budget Amount, Budget Policy, or dates to edit</li>
+                                <li>Click the checkmark or press Enter to save</li>
+                            </ol>
+                        </div>
+
+                        <div id="campaigns" class="guide-subsection">
+                            <h3>Browsing Campaigns</h3>
+                            <p>The CAMPAIGNS section shows all your advertising campaigns organized by type.</p>
+
+                            <h4>Filtering Campaigns</h4>
+                            <p>Use the filter buttons at the top of the Entity Tree:</p>
+                            <ul class="feature-list">
+                                <li><strong>TYPE filters:</strong> SP (Sponsored Products), SB (Sponsored Brands), SD (Sponsored Display), STV (Streaming TV)</li>
+                                <li><strong>SITE filters:</strong> Retail or B2B (Amazon Business)</li>
+                            </ul>
+
+                            <h4>Campaign Health Indicators</h4>
+                            <p>Campaigns show status indicators:</p>
+                            <ul class="feature-list">
+                                <li><span class="status-dot enabled">●</span> <strong>Green dot:</strong> Campaign is enabled and running</li>
+                                <li><span class="status-dot paused">●</span> <strong>Yellow dot:</strong> Campaign is paused</li>
+                                <li><span class="status-dot archived">●</span> <strong>Gray dot:</strong> Campaign is archived</li>
+                                <li><span class="incomplete-badge">⚠️</span> <strong>Warning icon:</strong> Campaign is incomplete (missing ad groups, keywords, or ads)</li>
+                            </ul>
+
+                            <h4>View All Campaigns</h4>
+                            <p>Click <strong>View All Campaigns</strong> at the top of the Campaigns section to see all campaigns in the main grid, regardless of portfolio.</p>
+                        </div>
+
+                        <div id="ad-groups" class="guide-subsection">
+                            <h3>Working with Ad Groups</h3>
+                            <p>Ad groups are shown nested under their parent campaigns in the Entity Tree.</p>
+
+                            <h4>Expanding Campaigns</h4>
+                            <ol class="numbered-list">
+                                <li>Click the arrow (▸) next to a campaign name to expand it</li>
+                                <li>Ad groups are shown with a diamond icon (◆)</li>
+                                <li>Click an ad group to view its contents (keywords, targets, ads)</li>
+                            </ol>
+
+                            <h4>Ad Group Tabs</h4>
+                            <p>When viewing an ad group, the main grid shows tabs for different entity types:</p>
+                            <ul class="feature-list">
+                                <li><strong>KEYWORDS:</strong> All keywords in the ad group with bids, match types, and status</li>
+                                <li><strong>TARGETS:</strong> Product and category targets</li>
+                                <li><strong>ADS:</strong> Product ads or creative ads depending on campaign type</li>
+                                <li><strong>NEGATIVES:</strong> Negative keywords and negative targets</li>
+                            </ul>
+
+                            <h4>Adding a New Ad Group</h4>
+                            <ol class="numbered-list">
+                                <li>Navigate to a campaign</li>
+                                <li>Click <strong>+ ADD AD GROUP</strong> in the toolbar</li>
+                                <li>Enter the ad group name and default bid</li>
+                                <li>The new ad group appears with a pending indicator</li>
+                            </ol>
+                        </div>
+                    </section>
+
+                    <!-- Editing -->
+                    <section id="editing" class="guide-section">
+                        <h2>Bulk Editing</h2>
+                        <p class="section-intro">The core power of ads command center lies in its bulk editing capabilities. Edit thousands of entities in seconds.</p>
+
+                        <div id="grid-editing" class="guide-subsection">
+                            <h3>Grid Selection & Editing</h3>
+
+                            <h4>Selecting Rows</h4>
+                            <ul class="feature-list">
+                                <li><strong>Single select:</strong> Click any row to select it</li>
+                                <li><strong>Multi-select:</strong> Hold Ctrl (Cmd on Mac) and click multiple rows</li>
+                                <li><strong>Range select:</strong> Click first row, then Shift+click last row</li>
+                                <li><strong>Select all:</strong> Click the checkbox in the header row</li>
+                            </ul>
+
+                            <h4>Bulk Actions</h4>
+                            <p>With rows selected, use the toolbar buttons:</p>
+                            <ul class="feature-list">
+                                <li><strong>⧉ DUPLICATE:</strong> Clone selected entities with new IDs</li>
+                                <li><strong>✕ DELETE:</strong> Archive or remove selected entities</li>
+                                <li><strong>State change:</strong> Change status of all selected (enable/pause/archive)</li>
+                            </ul>
+
+                            <h4>Sorting & Filtering</h4>
+                            <ul class="feature-list">
+                                <li><strong>Sort:</strong> Click any column header to sort. Click again to reverse.</li>
+                                <li><strong>Filter:</strong> Use the search box above the Entity Tree to filter by name</li>
+                                <li><strong>Column resize:</strong> Drag column borders to resize</li>
+                            </ul>
+                        </div>
+
+                        <div id="inline-editing" class="guide-subsection">
+                            <h3>Inline Field Editing</h3>
+                            <p>Edit values directly in the grid without opening dialogs.</p>
+
+                            <h4>Editing a Single Cell</h4>
+                            <ol class="numbered-list">
+                                <li>Double-click on any editable cell</li>
+                                <li>Type the new value</li>
+                                <li>Press Enter to save or Escape to cancel</li>
+                            </ol>
+
+                            <h4>Editable Fields</h4>
+                            <p>Common editable fields include:</p>
+                            <ul class="feature-list">
+                                <li><strong>Name:</strong> Campaign, ad group, or keyword name</li>
+                                <li><strong>Bid:</strong> Keyword bids, default bids, target bids</li>
+                                <li><strong>State:</strong> enabled, paused, archived</li>
+                                <li><strong>Daily Budget:</strong> Campaign daily budget</li>
+                                <li><strong>Match Type:</strong> broad, phrase, exact (for keywords)</li>
+                            </ul>
+
+                            <div class="tip-box">
+                                <div class="tip-icon">💡</div>
+                                <div class="tip-content">
+                                    <strong>Tip:</strong> Double-click on a campaign or ad group name in the Entity Tree sidebar to rename it without navigating away.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="details-panel" class="guide-subsection">
+                            <h3>Details Panel Editing</h3>
+                            <p>The right-side Details Panel shows all properties of the selected entity with organized sections.</p>
+
+                            <h4>Using the Details Panel</h4>
+                            <ol class="numbered-list">
+                                <li>Click on any entity in the grid or sidebar</li>
+                                <li>The Details Panel shows all its properties</li>
+                                <li>Fields with a pencil icon (✎) are editable</li>
+                                <li>Click on the field value to edit</li>
+                            </ol>
+
+                            <h4>Panel Sections</h4>
+                            <p>Properties are organized into logical sections:</p>
+                            <ul class="feature-list">
+                                <li><strong>Core Settings:</strong> Name, state, type, IDs</li>
+                                <li><strong>Bidding:</strong> Bids, bid strategies, adjustments</li>
+                                <li><strong>Budget:</strong> Daily budget, budget type, dates</li>
+                                <li><strong>Targeting:</strong> Targeting type, expression, match type</li>
+                            </ul>
+
+                            <h4>Collapsing the Panel</h4>
+                            <p>Click the panel header or the ✕ button to collapse it and maximize grid space. Click again to expand.</p>
+                        </div>
+                    </section>
+
+                    <!-- Campaign Types -->
+                    <section id="campaign-types" class="guide-section">
+                        <h2>Campaign Types</h2>
+                        <p class="section-intro">ads command center supports all major Amazon advertising campaign types with type-specific features.</p>
+
+                        <div id="sponsored-products" class="guide-subsection">
+                            <h3>Sponsored Products (SP)</h3>
+                            <p>Sponsored Products are the most common campaign type, promoting individual products in search results and product pages.</p>
+
+                            <h4>SP Campaign Features</h4>
+                            <ul class="feature-list">
+                                <li><strong>Targeting Types:</strong> Manual (keyword/product) or Automatic</li>
+                                <li><strong>Bidding Strategies:</strong> Dynamic down only, Dynamic up and down, Fixed bids</li>
+                                <li><strong>Placement Adjustments:</strong> Top of search, Product pages (up to 900%)</li>
+                            </ul>
+
+                            <h4>SP-Specific Editing</h4>
+                            <ul class="feature-list">
+                                <li>Bulk edit keyword bids across all ad groups</li>
+                                <li>Change match types (broad, phrase, exact)</li>
+                                <li>Add/remove product targets (ASINs, categories)</li>
+                                <li>Manage negative keywords at campaign or ad group level</li>
+                            </ul>
+                        </div>
+
+                        <div id="sponsored-brands" class="guide-subsection">
+                            <h3>Sponsored Brands (SB)</h3>
+                            <p>Sponsored Brands showcase your brand with custom headlines, logos, and multiple products.</p>
+
+                            <h4>SB Campaign Features</h4>
+                            <ul class="feature-list">
+                                <li><strong>Ad Formats:</strong> Product Collection, Store Spotlight, Video</li>
+                                <li><strong>Landing Pages:</strong> Store page, Product list, Custom URL</li>
+                                <li><strong>Creative Assets:</strong> Brand logo, custom images, video</li>
+                            </ul>
+
+                            <h4>SB-Specific Editing</h4>
+                            <ul class="feature-list">
+                                <li>Edit headlines and brand names</li>
+                                <li>Manage keyword bids with cost controls</li>
+                                <li>View and edit video ads</li>
+                                <li>Adjust AMC audience bid multipliers</li>
+                            </ul>
+                        </div>
+
+                        <div id="sponsored-display" class="guide-subsection">
+                            <h3>Sponsored Display (SD)</h3>
+                            <p>Sponsored Display ads reach audiences on and off Amazon with automated and custom targeting.</p>
+
+                            <h4>SD Campaign Features</h4>
+                            <ul class="feature-list">
+                                <li><strong>Targeting:</strong> Audiences, Contextual (products/categories), Remarketing</li>
+                                <li><strong>Bidding:</strong> Optimize for page visits, conversions, or reach</li>
+                                <li><strong>Creative Types:</strong> Custom images, video, auto-generated</li>
+                            </ul>
+
+                            <h4>SD-Specific Editing</h4>
+                            <ul class="feature-list">
+                                <li>Manage audience targets</li>
+                                <li>Edit product and category targets</li>
+                                <li>View and manage SD creatives</li>
+                                <li>Adjust remarketing lookback windows</li>
+                            </ul>
+                        </div>
+
+                        <div id="streaming-tv" class="guide-subsection">
+                            <h3>Streaming TV (STV)</h3>
+                            <p>Streaming TV ads appear on Fire TV, Prime Video, and other streaming platforms.</p>
+
+                            <h4>STV Campaign Features</h4>
+                            <ul class="feature-list">
+                                <li><strong>Ad Format:</strong> Video ads (15-30 seconds)</li>
+                                <li><strong>Targeting:</strong> In-market audiences, lifestyle, demographics</li>
+                                <li><strong>Placements:</strong> Fire TV, Prime Video, Twitch</li>
+                            </ul>
+
+                            <h4>STV-Specific Editing</h4>
+                            <ul class="feature-list">
+                                <li>View video ad creatives</li>
+                                <li>Manage audience targeting</li>
+                                <li>Edit frequency caps</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- Tools -->
+                    <section id="tools" class="guide-section">
+                        <h2>Productivity Tools</h2>
+                        <p class="section-intro">Built-in tools automate repetitive tasks and help maintain consistency across your campaigns.</p>
+
+                        <div id="naming-assistant" class="guide-subsection">
+                            <h3>Naming Assistant</h3>
+                            <p>Create consistent campaign and ad group names using customizable templates.</p>
+
+                            <h4>Opening the Naming Assistant</h4>
+                            <ol class="numbered-list">
+                                <li>Click <strong>TOOLS</strong> in the header</li>
+                                <li>Select <strong>Naming Assistant</strong></li>
+                                <li>The naming dialog opens with template options</li>
+                            </ol>
+
+                            <h4>Creating a Name Template</h4>
+                            <p>Build templates using components like:</p>
+                            <ul class="feature-list">
+                                <li><strong>Brand:</strong> Your brand name</li>
+                                <li><strong>ASIN:</strong> Product ASIN</li>
+                                <li><strong>Type:</strong> SP, SB, SD, STV</li>
+                                <li><strong>Targeting:</strong> Manual, Auto, Product Targeting</li>
+                                <li><strong>Match Type:</strong> Broad, Phrase, Exact</li>
+                                <li><strong>Custom Text:</strong> Any text you want to include</li>
+                            </ul>
+
+                            <h4>Applying Templates</h4>
+                            <ol class="numbered-list">
+                                <li>Arrange components by dragging them in order</li>
+                                <li>Choose separator (hyphen, underscore, space)</li>
+                                <li>Preview the generated name</li>
+                                <li>Save template for reuse or apply directly</li>
+                            </ol>
+                        </div>
+
+                        <div id="account-copy" class="guide-subsection">
+                            <h3>Account Copy Tool</h3>
+                            <p>Copy campaigns between Amazon profiles or marketplaces with structure intact.</p>
+
+                            <h4>Opening Account Copy</h4>
+                            <ol class="numbered-list">
+                                <li>Click <strong>TOOLS</strong> in the header</li>
+                                <li>Select <strong>Account Copy</strong></li>
+                                <li>The 4-step wizard opens</li>
+                            </ol>
+
+                            <h4>Copy Wizard Steps</h4>
+                            <div class="steps-container">
+                                <div class="step-item">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Select Source</h4>
+                                        <p>Choose the source profile and campaigns to copy. You can select individual campaigns or all campaigns.</p>
+                                    </div>
+                                </div>
+                                <div class="step-item">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Select Destination</h4>
+                                        <p>Choose the target profile. Can be same region or cross-region (NA to EU, etc.).</p>
+                                    </div>
+                                </div>
+                                <div class="step-item">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Configure Options</h4>
+                                        <p>Set budget adjustments, currency conversion, name prefixes, and what to include (keywords, targets, ads).</p>
+                                    </div>
+                                </div>
+                                <div class="step-item">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Review & Execute</h4>
+                                        <p>Preview what will be created, then stage changes for upload.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="warning-box">
+                                <div class="warning-icon">⚠️</div>
+                                <div class="warning-content">
+                                    <strong>Cross-Region Note:</strong> When copying across regions (e.g., UK to AU), ASINs may not exist in the target marketplace. You'll need to update ASINs after staging.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="duplicate-clone" class="guide-subsection">
+                            <h3>Duplicate & Clone</h3>
+                            <p>Quickly duplicate campaigns, ad groups, or other entities within the same account.</p>
+
+                            <h4>Duplicating Entities</h4>
+                            <ol class="numbered-list">
+                                <li>Select one or more entities in the grid</li>
+                                <li>Click <strong>⧉ DUPLICATE</strong> in the toolbar</li>
+                                <li>New copies are created with "(Copy)" suffix</li>
+                                <li>Edit the copies as needed</li>
+                                <li>Upload to create them in Amazon</li>
+                            </ol>
+
+                            <h4>Reviving Archived Campaigns</h4>
+                            <p>Amazon doesn't allow un-archiving campaigns, but you can clone them:</p>
+                            <ol class="numbered-list">
+                                <li>Find the archived campaign in the Entity Tree (shown with gray status)</li>
+                                <li>Click the warning icon or select the campaign</li>
+                                <li>Click <strong>Revive Campaign</strong> in the details panel</li>
+                                <li>A complete clone is created with all structure intact</li>
+                            </ol>
+                        </div>
+                    </section>
+
+                    <!-- Changes -->
+                    <section id="changes" class="guide-section">
+                        <h2>Managing Changes</h2>
+                        <p class="section-intro">All edits are tracked locally before being uploaded to Amazon. This gives you full control and the ability to review everything before it goes live.</p>
+
+                        <div id="pending-changes" class="guide-subsection">
+                            <h3>Pending Changes Panel</h3>
+                            <p>The Pending Changes panel at the bottom of the screen tracks all your modifications.</p>
+
+                            <h4>Opening the Panel</h4>
+                            <ol class="numbered-list">
+                                <li>Look for <strong>⚡ PENDING CHANGES</strong> at the bottom</li>
+                                <li>The number shows how many changes are queued</li>
+                                <li>Click to expand and see all changes</li>
+                            </ol>
+
+                            <h4>Change Information</h4>
+                            <p>Each change entry shows:</p>
+                            <ul class="feature-list">
+                                <li><strong>Operation:</strong> Create, Update, or Archive</li>
+                                <li><strong>Entity Type:</strong> Campaign, Ad Group, Keyword, etc.</li>
+                                <li><strong>Entity Name:</strong> What was changed</li>
+                                <li><strong>Field:</strong> Which property was modified</li>
+                                <li><strong>Old/New Values:</strong> Before and after values</li>
+                            </ul>
+                        </div>
+
+                        <div id="reverting" class="guide-subsection">
+                            <h3>Reverting Changes</h3>
+                            <p>Made a mistake? Revert individual changes or clear everything.</p>
+
+                            <h4>Revert Single Change</h4>
+                            <ol class="numbered-list">
+                                <li>Expand the Pending Changes panel</li>
+                                <li>Find the change you want to undo</li>
+                                <li>Click the <strong>↶ Revert</strong> button on that row</li>
+                                <li>The entity reverts to its original value</li>
+                            </ol>
+
+                            <h4>Clear All Changes</h4>
+                            <ol class="numbered-list">
+                                <li>Click <strong>Clear All</strong> in the Pending Changes panel</li>
+                                <li>Confirm the action</li>
+                                <li>All pending changes are discarded</li>
+                            </ol>
+
+                            <div class="tip-box">
+                                <div class="tip-icon">💡</div>
+                                <div class="tip-content">
+                                    <strong>Tip:</strong> Use Ctrl+Z (Cmd+Z on Mac) as a quick undo for the most recent change.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="uploading" class="guide-subsection">
+                            <h3>Uploading to Amazon</h3>
+                            <p>When you're ready to apply your changes to Amazon, use the Upload function.</p>
+
+                            <h4>Upload Process</h4>
+                            <ol class="numbered-list">
+                                <li>Review all pending changes in the panel</li>
+                                <li>Click <strong>↑ UPLOAD</strong> in the header</li>
+                                <li>A confirmation dialog shows what will be uploaded</li>
+                                <li>Click <strong>Upload Changes</strong> to proceed</li>
+                                <li>Progress is shown as changes are sent to Amazon</li>
+                            </ol>
+
+                            <h4>Upload Results</h4>
+                            <p>After upload completes:</p>
+                            <ul class="feature-list">
+                                <li><strong>Success:</strong> Changes are cleared from pending and entities are updated with Amazon IDs</li>
+                                <li><strong>Partial Success:</strong> Some changes succeeded, others show errors</li>
+                                <li><strong>Failure:</strong> Error messages explain what went wrong</li>
+                            </ul>
+
+                            <div class="warning-box">
+                                <div class="warning-icon">⚠️</div>
+                                <div class="warning-content">
+                                    <strong>Important:</strong> Amazon may take a few minutes to reflect changes in their interface. If you don't see changes immediately, wait and refresh.
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Advanced -->
+                    <section id="advanced" class="guide-section">
+                        <h2>Advanced Features</h2>
+                        <p class="section-intro">Power-user features for sophisticated campaign management workflows.</p>
+
+                        <div id="audiences" class="guide-subsection">
+                            <h3>Audiences & Targeting</h3>
+                            <p>Access Amazon's pre-built audience segments for targeting in SD and SP campaigns.</p>
+
+                            <h4>Browsing Audiences</h4>
+                            <ol class="numbered-list">
+                                <li>Expand the <strong>AUDIENCES</strong> section in the Entity Tree</li>
+                                <li>Browse categories: In-Market, Lifestyle, Interest, Life Events</li>
+                                <li>Search for specific audience segments</li>
+                            </ol>
+
+                            <h4>Audiences In Use</h4>
+                            <p>The <strong>AUDIENCES IN USE</strong> section shows which audience segments are currently targeted by your campaigns, making it easy to audit your targeting strategy.</p>
+
+                            <h4>Advertised & Targeted</h4>
+                            <ul class="feature-list">
+                                <li><strong>ADVERTISED:</strong> Products (ASINs) that have ads across your campaigns</li>
+                                <li><strong>TARGETED:</strong> Products and keywords being targeted in your campaigns</li>
+                            </ul>
+                        </div>
+
+                        <div id="revive-archived" class="guide-subsection">
+                            <h3>Reviving Archived Campaigns</h3>
+                            <p>Amazon permanently archives campaigns, but ads command center can clone them with all structure intact.</p>
+
+                            <h4>How It Works</h4>
+                            <p>When you revive an archived campaign:</p>
+                            <ol class="numbered-list">
+                                <li>A complete copy of the campaign is created</li>
+                                <li>All ad groups are duplicated</li>
+                                <li>All keywords, targets, and ads are copied</li>
+                                <li>Settings like bids and budgets are preserved</li>
+                                <li>The new campaign is created as "Paused" by default for safety</li>
+                            </ol>
+
+                            <div class="tip-box">
+                                <div class="tip-icon">💡</div>
+                                <div class="tip-content">
+                                    <strong>Tip:</strong> Archived campaigns are shown with a gray status dot and "ARCHIVED" label in the Entity Tree.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="keyboard-shortcuts" class="guide-subsection">
+                            <h3>Keyboard Shortcuts</h3>
+                            <p>Speed up your workflow with keyboard shortcuts.</p>
+
+                            <table class="shortcuts-table">
+                                <thead>
+                                    <tr>
+                                        <th>Shortcut</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><kbd>Ctrl</kbd> + <kbd>Z</kbd></td>
+                                        <td>Undo last change</td>
+                                    </tr>
+                                    <tr>
+                                        <td><kbd>Ctrl</kbd> + <kbd>Y</kbd></td>
+                                        <td>Redo last undone change</td>
+                                    </tr>
+                                    <tr>
+                                        <td><kbd>Ctrl</kbd> + <kbd>A</kbd></td>
+                                        <td>Select all rows in grid</td>
+                                    </tr>
+                                    <tr>
+                                        <td><kbd>Ctrl</kbd> + <kbd>C</kbd></td>
+                                        <td>Copy selected rows</td>
+                                    </tr>
+                                    <tr>
+                                        <td><kbd>Ctrl</kbd> + <kbd>V</kbd></td>
+                                        <td>Paste rows</td>
+                                    </tr>
+                                    <tr>
+                                        <td><kbd>Enter</kbd></td>
+                                        <td>Confirm edit / Save</td>
+                                    </tr>
+                                    <tr>
+                                        <td><kbd>Escape</kbd></td>
+                                        <td>Cancel edit / Close dialog</td>
+                                    </tr>
+                                    <tr>
+                                        <td><kbd>Delete</kbd></td>
+                                        <td>Delete/Archive selected</td>
+                                    </tr>
+                                    <tr>
+                                        <td><kbd>↑</kbd> <kbd>↓</kbd></td>
+                                        <td>Navigate grid rows</td>
+                                    </tr>
+                                    <tr>
+                                        <td><kbd>Tab</kbd></td>
+                                        <td>Move to next cell</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <!-- Need Help -->
+                    <section class="guide-section guide-help">
+                        <h2>Need More Help?</h2>
+                        <p>Can't find what you're looking for? We're here to help.</p>
+                        <div class="help-options">
+                            <a href="mailto:david@adscommandcenter.io" class="help-option">
+                                <span class="help-icon">✉️</span>
+                                <span class="help-text">Email Support</span>
+                            </a>
+                            <a href="/#waitlist" class="help-option">
+                                <span class="help-icon">🚀</span>
+                                <span class="help-text">Join Waitlist</span>
+                            </a>
+                        </div>
+                    </section>
+
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-icon">⚡</span>
+                        <span class="logo-text">ads command center</span>
+                    </div>
+                    <p class="footer-tagline">Campaign management for Amazon Sponsored Products</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Product</h4>
+                        <a href="/#features">Features</a>
+                        <a href="/guide.html">Guide</a>
+                        <a href="/#pricing">Pricing</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Legal</h4>
+                        <a href="/privacy.html">Privacy Policy</a>
+                        <a href="/terms.html">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-company">
+                    <p><strong>Ads Command Center LLC</strong></p>
+                    <p>Chula Vista, CA, United States</p>
+                    <p>Contact: <a href="mailto:david@adscommandcenter.io">david@adscommandcenter.io</a></p>
+                </div>
+                <div class="footer-disclaimer">
+                    <p>&copy; 2025 Ads Command Center LLC. All rights reserved.</p>
+                    <p class="amazon-disclaimer">This tool is not affiliated with, endorsed by, or sponsored by Amazon.com, Inc. or its affiliates.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/guide.js"></script>
+</body>
+</html>
