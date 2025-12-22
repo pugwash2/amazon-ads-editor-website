@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beta Download - ads command center</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .beta-hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #0a0a0f 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .beta-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(ellipse at 20% 20%, rgba(0, 217, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(0, 217, 255, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .beta-content {
+            text-align: center;
+            padding: 2rem;
+            max-width: 700px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .beta-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(0, 217, 255, 0.2) 0%, rgba(0, 217, 255, 0.1) 100%);
+            border: 1px solid rgba(0, 217, 255, 0.4);
+            color: #00d9ff;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+
+        .beta-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .beta-title span {
+            color: #00d9ff;
+        }
+
+        .beta-subtitle {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, #00d9ff 0%, #00a8cc 100%);
+            color: #000;
+            padding: 1.2rem 3rem;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 217, 255, 0.3);
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 217, 255, 0.4);
+        }
+
+        .download-btn svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .version-info {
+            margin-top: 1.5rem;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        .version-info strong {
+            color: #00d9ff;
+        }
+
+        .beta-features {
+            margin-top: 4rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            text-align: left;
+        }
+
+        .beta-feature {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+
+        .beta-feature h3 {
+            color: #00d9ff;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .beta-feature p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .beta-notice {
+            margin-top: 3rem;
+            padding: 1.5rem;
+            background: rgba(251, 191, 36, 0.1);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            border-radius: 8px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .beta-notice strong {
+            color: #fbbf24;
+        }
+
+        @media (max-width: 768px) {
+            .beta-title {
+                font-size: 2.5rem;
+            }
+            .beta-features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="beta-hero">
+        <div class="beta-content">
+            <div class="beta-badge">Private Beta</div>
+            <h1 class="beta-title">Welcome to <span>ads command center</span></h1>
+            <p class="beta-subtitle">Thank you for joining the beta program. Download the installer below to get started with the most powerful Amazon Ads management tool.</p>
+
+            <a href="https://github.com/pugwash2/ads-command-center-releases/releases/download/v1.0.0-beta.1/ads.command.center.Setup.1.0.0-beta.1.exe" class="download-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                Download for Windows
+            </a>
+
+            <p class="version-info">Version <strong>1.0.0-beta.1</strong> &bull; Windows 10/11 &bull; 131 MB</p>
+
+            <div class="beta-features">
+                <div class="beta-feature">
+                    <h3>Auto Updates</h3>
+                    <p>The app will automatically notify you when new versions are available and install updates seamlessly.</p>
+                </div>
+                <div class="beta-feature">
+                    <h3>Usage Telemetry</h3>
+                    <p>Anonymous usage data helps us improve the app. No personal information is collected.</p>
+                </div>
+                <div class="beta-feature">
+                    <h3>Direct Support</h3>
+                    <p>Report bugs or request features directly. Your feedback shapes the product.</p>
+                </div>
+            </div>
+
+            <div class="beta-notice">
+                <strong>Getting Started:</strong> After installation, you'll need to connect your Amazon Advertising account via OAuth. The app works with Seller Central and Vendor Central accounts across all Amazon marketplaces.
+            </div>
+        </div>
+    </section>
+</body>
+</html>
