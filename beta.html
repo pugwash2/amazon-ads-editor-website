@@ -166,14 +166,29 @@
             <h1 class="beta-title">Welcome to <span>ads command center</span></h1>
             <p class="beta-subtitle">Thank you for joining the beta program. Download the installer below to get started with the most powerful Amazon Ads management tool.</p>
 
-            <a href="https://github.com/pugwash2/ads-command-center-releases/releases/download/v1.0.0-beta.1/ads.command.center.Setup.1.0.0-beta.1.exe" class="download-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                </svg>
-                Download for Windows
-            </a>
+            <!-- Email gate form -->
+            <div id="emailGate">
+                <form id="betaForm" style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+                    <input type="email" id="betaEmail" placeholder="Enter your email" required
+                        style="padding: 1rem 1.5rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: #fff; font-size: 1rem; min-width: 280px;">
+                    <button type="submit" class="download-btn" style="border: none; cursor: pointer;">
+                        Get Download Link
+                    </button>
+                </form>
+                <p class="version-info">Version <strong>1.0.0-beta.1</strong> &bull; Windows 10/11 &bull; 131 MB</p>
+            </div>
 
-            <p class="version-info">Version <strong>1.0.0-beta.1</strong> &bull; Windows 10/11 &bull; 131 MB</p>
+            <!-- Download section (hidden until email submitted) -->
+            <div id="downloadSection" style="display: none;">
+                <a href="https://github.com/pugwash2/ads-command-center-releases/releases/download/v1.0.0-beta.1/ads.command.center.Setup.1.0.0-beta.1.exe" class="download-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    Download for Windows
+                </a>
+                <p class="version-info">Version <strong>1.0.0-beta.1</strong> &bull; Windows 10/11 &bull; 131 MB</p>
+                <p style="color: rgba(255,255,255,0.5); margin-top: 1rem; font-size: 0.9rem;">Welcome, <span id="userEmail"></span>!</p>
+            </div>
 
             <div class="beta-features">
                 <div class="beta-feature">
@@ -195,5 +210,39 @@
             </div>
         </div>
     </section>
+
+    <script>
+        document.getElementById('betaForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('betaEmail').value;
+
+            // Send to your server
+            try {
+                await fetch('https://amazon-ads-proxy.vercel.app/api/beta-signup', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, timestamp: new Date().toISOString() })
+                });
+            } catch (err) {
+                console.log('Signup logged locally');
+            }
+
+            // Show download section
+            document.getElementById('emailGate').style.display = 'none';
+            document.getElementById('downloadSection').style.display = 'block';
+            document.getElementById('userEmail').textContent = email;
+
+            // Store in localStorage so they don't have to re-enter
+            localStorage.setItem('betaEmail', email);
+        });
+
+        // Check if already signed up
+        const storedEmail = localStorage.getItem('betaEmail');
+        if (storedEmail) {
+            document.getElementById('emailGate').style.display = 'none';
+            document.getElementById('downloadSection').style.display = 'block';
+            document.getElementById('userEmail').textContent = storedEmail;
+        }
+    </script>
 </body>
 </html>
