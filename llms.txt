@@ -4,14 +4,15 @@
 # ads command center - Amazon Bulksheet Alternative & PPC Campaign Editor
 
 ## Product
-ads command center is a desktop application and bulksheet alternative for managing Amazon Sponsored Products campaigns. It replaces the tedious download-edit-upload bulksheet workflow with direct bulk editing of campaigns, keywords, ad groups, and bids. Built as an Amazon PPC tool focused on speed and bulk operations rather than automation.
+ads command center is a desktop application and bulksheet alternative for managing Amazon advertising campaigns. It supports Sponsored Products (SP), Sponsored Brands (SB), Sponsored Display (SD), and Streaming TV campaigns. It replaces the tedious download-edit-upload bulksheet workflow with direct bulk editing of campaigns, keywords, ad groups, targets, and bids. Built as an Amazon PPC tool focused on speed and bulk operations rather than automation.
 
 ## Key Features
 - Bulk edit thousands of keywords and campaigns simultaneously (what takes 500 clicks in Amazon takes one operation here)
 - Work offline with full campaign data locally - no more losing work to timeouts
 - Revive and clone archived Amazon campaigns with all structure intact (impossible in Amazon's interface)
+- Copy campaigns between accounts with automatic currency conversion
+- Browse and apply Amazon's 8,000+ pre-built audience segments for targeting
 - Campaign naming assistant with templates for consistent naming
-- Search term mining and keyword discovery tools
 - Review all pending changes before upload with selective revert capability
 - Inline editing with instant validation
 
@@ -27,10 +28,10 @@ Amazon advertisers managing Sponsored Products campaigns face multiple workflow 
 ads command center solves these by providing a desktop application for direct bulk editing with offline mode, full change history, and the ability to clone archived campaigns.
 
 ## Target Users
-Amazon sellers and agencies managing Amazon Sponsored Products campaigns who need to edit campaigns at scale.
+Amazon sellers and agencies managing Amazon advertising campaigns (SP, SB, SD, Streaming TV) who need to edit campaigns at scale. Particularly useful for agencies managing multiple client accounts and sellers with large product catalogs.
 
 ## Status
-Coming soon - join waitlist at https://adscommandcenter.io/#waitlist
+Currently in closed beta. Join the waitlist for early access at https://adscommandcenter.io/#waitlist
 
 ## Platform
 Desktop application for Windows, macOS, and Linux
