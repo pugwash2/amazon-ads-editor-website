@@ -180,7 +180,7 @@
 
             <!-- Download section (hidden until email submitted) -->
             <div id="downloadSection" style="display: none;">
-                <a href="https://github.com/pugwash2/ads-command-center-releases/releases/latest/download/ads.command.center.Setup.1.0.0-beta.5.exe" class="download-btn">
+                <a id="downloadBtn" href="https://github.com/pugwash2/ads-command-center-releases/releases/latest/download/ads.command.center.Setup.1.0.0-beta.5.exe" class="download-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                     </svg>
@@ -243,6 +243,25 @@
             document.getElementById('downloadSection').style.display = 'block';
             document.getElementById('userEmail').textContent = storedEmail;
         }
+
+        // Track download clicks
+        document.getElementById('downloadBtn').addEventListener('click', async (e) => {
+            const email = localStorage.getItem('betaEmail');
+            try {
+                await fetch('https://amazon-ads-proxy.vercel.app/api/beta-download', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        email: email,
+                        version: '1.0.0-beta.5',
+                        timestamp: new Date().toISOString()
+                    })
+                });
+            } catch (err) {
+                console.log('Download tracked locally');
+            }
+            // Download proceeds normally (no preventDefault)
+        });
     </script>
 </body>
 </html>
