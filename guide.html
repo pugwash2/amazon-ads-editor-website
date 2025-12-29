@@ -87,7 +87,7 @@
         }
       },
       "datePublished": "2025-01-01",
-      "dateModified": "2025-12-20"
+      "dateModified": "2025-12-28"
     }
     </script>
 
@@ -222,6 +222,13 @@
                                 <li><a href="#pending-changes">Pending Changes Panel</a></li>
                                 <li><a href="#reverting">Reverting Changes</a></li>
                                 <li><a href="#uploading">Uploading to Amazon</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#reporting">Reporting & Performance</a>
+                            <ol>
+                                <li><a href="#performance-dashboard">Performance Dashboard</a></li>
+                                <li><a href="#date-range">Date Range Selection</a></li>
+                                <li><a href="#search-term-miner">Search Term Miner</a></li>
                             </ol>
                         </li>
                         <li><a href="#advanced">Advanced Features</a>
@@ -396,10 +403,25 @@
                             <h4>Editing Portfolio Budget</h4>
                             <ol class="numbered-list">
                                 <li>Click on a portfolio to select it</li>
-                                <li>In the Details Panel, find the <strong>Budget</strong> section</li>
-                                <li>Click on Budget Amount, Budget Policy, or dates to edit</li>
-                                <li>Click the checkmark or press Enter to save</li>
+                                <li>Click the <strong>Edit Portfolio</strong> button in the header or Details Panel</li>
+                                <li>The Portfolio Settings modal opens with all budget options</li>
                             </ol>
+
+                            <h4>Portfolio Budget Options</h4>
+                            <p>Configure comprehensive budget controls for your portfolio:</p>
+                            <ul class="feature-list">
+                                <li><strong>Budget Cap:</strong> Set a maximum budget limit for all campaigns in the portfolio combined</li>
+                                <li><strong>Budget Policy:</strong> Choose between Monthly Recurring or Date Range budgets</li>
+                                <li><strong>Start/End Dates:</strong> Define the budget period (required for Date Range policy)</li>
+                                <li><strong>Share Unspent Budget:</strong> Enable this option to automatically redistribute unused daily budget from paused or under-spending campaigns to active ones within the portfolio</li>
+                            </ul>
+
+                            <div class="tip-box">
+                                <div class="tip-icon">💡</div>
+                                <div class="tip-content">
+                                    <strong>Pro Tip:</strong> The "Share Unspent Budget" feature maximizes your ad spend efficiency. When enabled, if one campaign under-spends its daily budget, that budget is automatically allocated to other campaigns in the portfolio.
+                                </div>
+                            </div>
                         </div>
 
                         <div id="campaigns" class="guide-subsection">
@@ -407,10 +429,12 @@
                             <p>The CAMPAIGNS section shows all your advertising campaigns organized by type.</p>
 
                             <h4>Filtering Campaigns</h4>
-                            <p>Use the filter buttons at the top of the Entity Tree:</p>
+                            <p>Use the filter controls at the top of the Entity Tree:</p>
                             <ul class="feature-list">
+                                <li><strong>Search Filter:</strong> Type in the search box to instantly filter campaigns by name. Matching campaigns are highlighted as you type.</li>
                                 <li><strong>TYPE filters:</strong> SP (Sponsored Products), SB (Sponsored Brands), SD (Sponsored Display), STV (Streaming TV)</li>
-                                <li><strong>SITE filters:</strong> Retail or B2B (Amazon Business)</li>
+                                <li><strong>SITE filters:</strong> Amazon (standard) or B2B (Amazon Business)</li>
+                                <li><strong>Hide Archived:</strong> Toggle this option to hide archived campaigns from the sidebar, reducing clutter when managing active campaigns.</li>
                             </ul>
 
                             <h4>Campaign Health Indicators</h4>
@@ -713,6 +737,14 @@
                                     <strong>Cross-Region Note:</strong> When copying across regions (e.g., UK to AU), ASINs may not exist in the target marketplace. You'll need to update ASINs after staging.
                                 </div>
                             </div>
+
+                            <h4>B2B Campaign Considerations</h4>
+                            <p>When copying campaigns that include B2B (Amazon Business) targeting:</p>
+                            <ul class="feature-list">
+                                <li><strong>B2B targeting is preserved:</strong> SP and SB campaigns with B2B targeting will maintain their Amazon Business site restrictions</li>
+                                <li><strong>Cross-region B2B:</strong> Amazon Business availability varies by marketplace. Verify the destination supports B2B before copying</li>
+                                <li><strong>SD campaigns:</strong> Sponsored Display doesn't support campaign-level B2B — use audience targeting instead</li>
+                            </ul>
                         </div>
 
                         <div id="duplicate-clone" class="guide-subsection">
@@ -727,6 +759,24 @@
                                 <li>Edit the copies as needed</li>
                                 <li>Upload to create them in Amazon</li>
                             </ol>
+
+                            <h4>Duplicate to B2B (Amazon Business)</h4>
+                            <p>Create B2B versions of your campaigns to target Amazon Business customers:</p>
+                            <ol class="numbered-list">
+                                <li>Right-click on an SP or SB campaign in the grid or sidebar</li>
+                                <li>Select <strong>🏢 Duplicate to B2B</strong> from the context menu</li>
+                                <li>A new campaign is created with "[B2B]" prefix and Amazon Business targeting enabled</li>
+                                <li>All ad groups, keywords, targets, and ads are copied to the new campaign</li>
+                                <li>Review and upload to create the B2B campaign in Amazon</li>
+                            </ol>
+                            <p>For bulk B2B duplication, select multiple SP/SB campaigns and use the bulk actions menu.</p>
+
+                            <div class="tip-box">
+                                <div class="tip-icon">💡</div>
+                                <div class="tip-content">
+                                    <strong>Note:</strong> B2B campaigns target Amazon Business customers (companies with business accounts). This feature is available for Sponsored Products (SP) and Sponsored Brands (SB) campaigns. Sponsored Display uses audience targeting for B2B instead.
+                                </div>
+                            </div>
 
                             <h4>Reviving Archived Campaigns</h4>
                             <p>Amazon doesn't allow un-archiving campaigns, but you can clone them:</p>
@@ -818,6 +868,102 @@
                                 <div class="warning-icon">⚠️</div>
                                 <div class="warning-content">
                                     <strong>Important:</strong> Amazon may take a few minutes to reflect changes in their interface. If you don't see changes immediately, wait and refresh.
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Reporting & Performance -->
+                    <section id="reporting" class="guide-section">
+                        <h2>Reporting & Performance</h2>
+                        <p class="section-intro">Track campaign performance with real-time metrics and powerful analysis tools. Performance data helps you make informed optimization decisions.</p>
+
+                        <div id="performance-dashboard" class="guide-subsection">
+                            <h3>Performance Dashboard</h3>
+                            <p>View key metrics for all your campaigns directly in the main grid.</p>
+
+                            <h4>Downloading Performance Data</h4>
+                            <ol class="numbered-list">
+                                <li>Click <strong>⬇ DOWNLOAD</strong> in the header</li>
+                                <li>Campaign data is fetched along with performance metrics</li>
+                                <li>Metrics include: Impressions, Clicks, CTR, Spend, CPC, Sales, ACOS, ROAS</li>
+                            </ol>
+
+                            <h4>Performance Columns</h4>
+                            <p>The campaign grid displays these performance metrics:</p>
+                            <ul class="feature-list">
+                                <li><strong>Impressions:</strong> Number of times your ads were displayed</li>
+                                <li><strong>Clicks:</strong> Number of clicks on your ads</li>
+                                <li><strong>CTR:</strong> Click-through rate (Clicks ÷ Impressions)</li>
+                                <li><strong>Spend:</strong> Total ad spend for the period</li>
+                                <li><strong>CPC:</strong> Cost per click (Spend ÷ Clicks)</li>
+                                <li><strong>Sales:</strong> Attributed sales from ad clicks</li>
+                                <li><strong>ACOS:</strong> Advertising Cost of Sale (Spend ÷ Sales)</li>
+                                <li><strong>ROAS:</strong> Return on Ad Spend (Sales ÷ Spend)</li>
+                            </ul>
+                        </div>
+
+                        <div id="date-range" class="guide-subsection">
+                            <h3>Date Range Selection</h3>
+                            <p>Control the time period for performance data using the date range picker.</p>
+
+                            <h4>Using the Date Picker</h4>
+                            <ol class="numbered-list">
+                                <li>Click the date range button in the header (shows "Last 30 Days" by default)</li>
+                                <li>Choose from quick presets: 7 Days, 14 Days, 30 Days, 60 Days, 90 Days</li>
+                                <li>Or click <strong>Custom Range</strong> to select specific dates</li>
+                            </ol>
+
+                            <h4>Custom Date Range</h4>
+                            <ol class="numbered-list">
+                                <li>Click on a start date in the left calendar</li>
+                                <li>Click on an end date in the right calendar</li>
+                                <li>The selected range is highlighted between the dates</li>
+                                <li>Click <strong>Apply</strong> to use the custom range</li>
+                            </ol>
+
+                            <div class="warning-box">
+                                <div class="warning-icon">⚠️</div>
+                                <div class="warning-content">
+                                    <strong>Data Retention Limits:</strong> Amazon retains performance data for limited periods: SP (95 days), SD (65 days), SB (60 days). Requests beyond these limits will return partial or no data.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="search-term-miner" class="guide-subsection">
+                            <h3>Search Term Miner</h3>
+                            <p>Discover high-performing search terms and optimize your keyword strategy.</p>
+
+                            <h4>Opening Search Term Miner</h4>
+                            <ol class="numbered-list">
+                                <li>Click <strong>TOOLS</strong> in the header</li>
+                                <li>Select <strong>Search Term Miner</strong></li>
+                                <li>Data is loaded from Amazon's Search Term Reports</li>
+                            </ol>
+
+                            <h4>Analyzing Search Terms</h4>
+                            <p>The miner displays search terms with performance metrics:</p>
+                            <ul class="feature-list">
+                                <li><strong>Search Term:</strong> The actual query customers used</li>
+                                <li><strong>Impressions/Clicks:</strong> Traffic volume</li>
+                                <li><strong>Orders:</strong> Conversions from the search term</li>
+                                <li><strong>CVR:</strong> Conversion rate</li>
+                                <li><strong>ACOS:</strong> Cost efficiency</li>
+                                <li><strong>Spend:</strong> Total spend on this term</li>
+                            </ul>
+
+                            <h4>Taking Action on Search Terms</h4>
+                            <p>Click on a search term to open the action modal:</p>
+                            <ul class="feature-list">
+                                <li><strong>Promote:</strong> Add the search term as a keyword to an ad group (Exact or Phrase match)</li>
+                                <li><strong>Negate:</strong> Add as a negative keyword to block poor performers</li>
+                                <li><strong>Watch List:</strong> Save terms for later review</li>
+                            </ul>
+
+                            <div class="tip-box">
+                                <div class="tip-icon">💡</div>
+                                <div class="tip-content">
+                                    <strong>Pro Tip:</strong> Focus on search terms with high orders and low ACOS — these are your best performers. Promote them as exact match keywords for better control. Negate search terms with high spend but zero orders.
                                 </div>
                             </div>
                         </div>
