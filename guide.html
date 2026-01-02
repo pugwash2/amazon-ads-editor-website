@@ -87,7 +87,7 @@
         }
       },
       "datePublished": "2025-01-01",
-      "dateModified": "2025-12-28"
+      "dateModified": "2026-01-02"
     }
     </script>
 
@@ -193,6 +193,7 @@
                                 <li><a href="#portfolios">Managing Portfolios</a></li>
                                 <li><a href="#campaigns">Browsing Campaigns</a></li>
                                 <li><a href="#ad-groups">Working with Ad Groups</a></li>
+                                <li><a href="#view-all-keywords">View All Keywords</a></li>
                             </ol>
                         </li>
                         <li><a href="#editing">Bulk Editing</a>
@@ -227,8 +228,10 @@
                         <li><a href="#reporting">Reporting & Performance</a>
                             <ol>
                                 <li><a href="#performance-dashboard">Performance Dashboard</a></li>
+                                <li><a href="#analytics-dashboard">Analytics Dashboard</a></li>
                                 <li><a href="#date-range">Date Range Selection</a></li>
                                 <li><a href="#search-term-miner">Search Term Miner</a></li>
+                                <li><a href="#ai-suggestions">AI Keyword Suggestions</a></li>
                             </ol>
                         </li>
                         <li><a href="#advanced">Advanced Features</a>
@@ -477,6 +480,42 @@
                                 <li>Enter the ad group name and default bid</li>
                                 <li>The new ad group appears with a pending indicator</li>
                             </ol>
+                        </div>
+
+                        <div id="view-all-keywords" class="guide-subsection">
+                            <h3>View All Keywords</h3>
+                            <p>See all keywords across all campaigns in a single unified grid — perfect for account-wide keyword management and analysis.</p>
+
+                            <h4>Opening View All Keywords</h4>
+                            <ol class="numbered-list">
+                                <li>In the Entity Tree sidebar, find the <strong>TARGETED KEYWORDS</strong> section</li>
+                                <li>Click <strong>View All Keywords</strong> button at the top of that section</li>
+                                <li>The main grid shows all keywords from all campaigns</li>
+                            </ol>
+
+                            <h4>Features</h4>
+                            <ul class="feature-list">
+                                <li><strong>Unified view:</strong> See keywords from SP, SB, and SD campaigns in one grid</li>
+                                <li><strong>Active Only filter:</strong> Toggle to show only keywords in enabled campaigns</li>
+                                <li><strong>Full performance data:</strong> Impressions, Clicks, Spend, Sales, ACOS, Orders</li>
+                                <li><strong>Campaign context:</strong> Each keyword row shows its parent campaign and ad group</li>
+                                <li><strong>Bulk editing:</strong> Select multiple keywords and edit bids or states</li>
+                            </ul>
+
+                            <h4>Horizontal Scrolling</h4>
+                            <p>When the grid has many columns, use the scroll navigation:</p>
+                            <ul class="feature-list">
+                                <li><strong>Scroll buttons:</strong> ◀ and ▶ buttons appear in the bottom-right corner</li>
+                                <li><strong>Shift + scroll wheel:</strong> Hold Shift and scroll your mouse wheel to scroll horizontally</li>
+                                <li><strong>↔ button:</strong> Click to auto-scroll to reveal hidden columns</li>
+                            </ul>
+
+                            <div class="tip-box">
+                                <div class="tip-icon">💡</div>
+                                <div class="tip-content">
+                                    <strong>Pro Tip:</strong> Use View All Keywords to quickly audit keyword performance across your entire account. Sort by ACOS to find your worst performers, or by Sales to find your top converters.
+                                </div>
+                            </div>
                         </div>
                     </section>
 
@@ -903,6 +942,51 @@
                             </ul>
                         </div>
 
+                        <div id="analytics-dashboard" class="guide-subsection">
+                            <h3>Analytics Dashboard</h3>
+                            <p>The Analytics Dashboard provides visual performance charts with dual-axis support for comparing metrics across all your advertising tactics.</p>
+
+                            <h4>Opening the Analytics Dashboard</h4>
+                            <ol class="numbered-list">
+                                <li>Click the <strong>chart icon (📊)</strong> in the header bar</li>
+                                <li>The Analytics panel slides out from the right side</li>
+                                <li>Performance data loads automatically if you've already downloaded</li>
+                            </ol>
+
+                            <h4>Dashboard Features</h4>
+                            <ul class="feature-list">
+                                <li><strong>Dual-axis charts:</strong> Compare two metrics simultaneously — the first metric shows as lines, the second as bars</li>
+                                <li><strong>Metric selectors:</strong> Choose from IMP, CLK, SPEND, SALES, ACOS, ROAS (select up to 2)</li>
+                                <li><strong>Date range buttons:</strong> Quick selection for 7, 14, 30, or 60 days</li>
+                                <li><strong>Tactic toggles:</strong> Show/hide performance by type: ALL, SP, SB, SD, STV</li>
+                                <li><strong>Summary cards:</strong> View totals for each ad type with key metrics</li>
+                            </ul>
+
+                            <h4>Using Dual-Axis Charts</h4>
+                            <ol class="numbered-list">
+                                <li>Click a metric button (e.g., SPEND) — it becomes the primary metric shown as lines</li>
+                                <li>Click a second metric (e.g., SALES) — it becomes the secondary metric shown as bars</li>
+                                <li>The left axis shows the primary metric scale, the right axis shows the secondary</li>
+                                <li>Click an active metric to deselect it</li>
+                            </ol>
+
+                            <h4>Tactic Color Legend</h4>
+                            <ul class="feature-list">
+                                <li><span style="color:#fff">●</span> <strong>ALL (White):</strong> Combined total across all tactics</li>
+                                <li><span style="color:#00d9ff">●</span> <strong>SP (Cyan):</strong> Sponsored Products performance</li>
+                                <li><span style="color:#ff00ff">●</span> <strong>SB (Magenta):</strong> Sponsored Brands performance</li>
+                                <li><span style="color:#ff9500">●</span> <strong>SD (Orange):</strong> Sponsored Display performance</li>
+                                <li><span style="color:#00ff88">●</span> <strong>STV (Green):</strong> Streaming TV performance</li>
+                            </ul>
+
+                            <div class="tip-box">
+                                <div class="tip-icon">💡</div>
+                                <div class="tip-content">
+                                    <strong>Pro Tip:</strong> Compare SPEND vs SALES to quickly visualize profitability trends. When the SALES bars exceed the SPEND line, you're profitable for that period.
+                                </div>
+                            </div>
+                        </div>
+
                         <div id="date-range" class="guide-subsection">
                             <h3>Date Range Selection</h3>
                             <p>Control the time period for performance data using the date range picker.</p>
@@ -964,6 +1048,42 @@
                                 <div class="tip-icon">💡</div>
                                 <div class="tip-content">
                                     <strong>Pro Tip:</strong> Focus on search terms with high orders and low ACOS — these are your best performers. Promote them as exact match keywords for better control. Negate search terms with high spend but zero orders.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="ai-suggestions" class="guide-subsection">
+                            <h3>AI Keyword Suggestions</h3>
+                            <p>Amazon's Target Promotion API provides AI-generated keyword and product recommendations based on your auto campaign performance.</p>
+
+                            <h4>Accessing AI Suggestions</h4>
+                            <ol class="numbered-list">
+                                <li>Click <strong>TOOLS</strong> in the header</li>
+                                <li>Select <strong>AI Suggestions</strong></li>
+                                <li>The suggestions panel loads recommendations from Amazon</li>
+                            </ol>
+
+                            <h4>How Suggestions Work</h4>
+                            <p>Amazon analyzes your automatic campaign data to suggest:</p>
+                            <ul class="feature-list">
+                                <li><strong>Keywords:</strong> High-performing search terms from auto campaigns worth promoting to manual</li>
+                                <li><strong>Products (ASINs):</strong> Products that perform well as targets based on customer behavior</li>
+                            </ul>
+
+                            <h4>Acting on Suggestions</h4>
+                            <ol class="numbered-list">
+                                <li>Review the suggested keywords or ASINs with their performance metrics</li>
+                                <li>Click on a suggestion to open the action modal</li>
+                                <li>Choose the destination campaign/ad group</li>
+                                <li>Select match type (for keywords: exact or phrase)</li>
+                                <li>Set the bid amount</li>
+                                <li>Click <strong>Add</strong> to stage the new keyword or target</li>
+                            </ol>
+
+                            <div class="tip-box">
+                                <div class="tip-icon">💡</div>
+                                <div class="tip-content">
+                                    <strong>Note:</strong> AI Suggestions are separate from Search Term Miner. Suggestions come from Amazon's recommendation engine, while Search Term Miner shows your actual search term report data.
                                 </div>
                             </div>
                         </div>
