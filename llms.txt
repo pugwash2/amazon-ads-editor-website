@@ -15,6 +15,11 @@ ads command center is a desktop application and bulksheet alternative for managi
 - Campaign naming assistant with templates for consistent naming
 - Review all pending changes before upload with selective revert capability
 - Inline editing with instant validation
+- Analytics Dashboard with dual-axis charts for comparing metrics (Impressions, Clicks, Spend, Sales, ACOS, ROAS)
+- View All Keywords - see keywords from all campaigns in one grid with performance data
+- Search Term Miner - analyze search terms, promote winners to keywords, negate wasted spend
+- AI Keyword Suggestions - Amazon's Target Promotion API recommendations for keywords and products
+- Horizontal scroll navigation for data-dense grids on smaller screens
 
 ## Problem Solved
 Amazon advertisers managing Sponsored Products campaigns face multiple workflow problems:

@@ -42,3 +42,4 @@ Allow: /
 
 # Sitemap and LLMs.txt
 Sitemap: https://adscommandcenter.io/sitemap.xml
+LLMsTxt: https://adscommandcenter.io/llms.txt
