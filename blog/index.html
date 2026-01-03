@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - ads command center</title>
+    <meta name="description" content="Tips, insights, and updates about Amazon advertising campaign management. Learn how to optimize your Amazon PPC workflows.">
+    <link rel="canonical" href="https://adscommandcenter.io/blog/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Blog - ads command center">
+    <meta property="og:description" content="Tips, insights, and updates about Amazon advertising campaign management.">
+    <meta property="og:url" content="https://adscommandcenter.io/blog/">
+    <meta property="og:site_name" content="ads command center">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .blog-hero {
+            padding: 120px 20px 60px;
+            background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #0a0a0f 100%);
+            text-align: center;
+        }
+        .blog-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--color-text-primary);
+        }
+        .blog-hero p {
+            font-size: 1.2rem;
+            color: var(--color-text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .blog-grid {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .blog-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+        .blog-card:hover {
+            border-color: rgba(0, 217, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        .blog-card-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.85rem;
+            color: var(--color-text-tertiary);
+        }
+        .blog-card-tag {
+            background: rgba(0, 217, 255, 0.1);
+            color: #00d9ff;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .blog-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--color-text-primary);
+        }
+        .blog-card h2 a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .blog-card h2 a:hover {
+            color: #00d9ff;
+        }
+        .blog-card p {
+            color: var(--color-text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .read-more {
+            color: #00d9ff;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .read-more:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">
+                <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="6" fill="url(#logo-gradient)"/>
+                    <path d="M18 4L8 18h6l-2 10 10-14h-6l2-10z" fill="#00d9ff"/>
+                    <defs>
+                        <linearGradient id="logo-gradient" x1="0" y1="0" x2="32" y2="32">
+                            <stop offset="0%" stop-color="#1a1a2e"/>
+                            <stop offset="100%" stop-color="#0d0d1a"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span>ads command center</span>
+            </a>
+            <div class="nav-links">
+                <a href="/#features">Features</a>
+                <a href="/guide.html">Guide</a>
+                <a href="/blog/" class="active">Blog</a>
+                <a href="/#waitlist" class="btn btn-primary">Join Waitlist</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="blog-hero">
+        <h1>Blog</h1>
+        <p>Tips, insights, and updates about Amazon advertising campaign management</p>
+    </section>
+
+    <div class="blog-grid">
+        <article class="blog-card">
+            <div class="blog-card-meta">
+                <span class="blog-card-tag">Product</span>
+                <span>January 2, 2026</span>
+                <span>5 min read</span>
+            </div>
+            <h2><a href="/blog/google-ads-editor-for-amazon.html">Why Amazon Needs Its Own Google Ads Editor</a></h2>
+            <p>Google Ads Editor changed how advertisers manage campaigns at scale. Amazon advertisers deserve the same power. Here's why we built ads command center to be the Google Ads Editor for Amazon.</p>
+            <a href="/blog/google-ads-editor-for-amazon.html" class="read-more">Read more →</a>
+        </article>
+
+        <!-- More articles will go here -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="32" height="32" rx="6" fill="url(#footer-logo-gradient)"/>
+                            <path d="M18 4L8 18h6l-2 10 10-14h-6l2-10z" fill="#00d9ff"/>
+                            <defs>
+                                <linearGradient id="footer-logo-gradient" x1="0" y1="0" x2="32" y2="32">
+                                    <stop offset="0%" stop-color="#1a1a2e"/>
+                                    <stop offset="100%" stop-color="#0d0d1a"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span>ads command center</span>
+                    </a>
+                    <p>Bulk editing for Amazon Ads campaigns. Say goodbye to bulksheets.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <a href="/#features">Features</a>
+                    <a href="/guide.html">User Guide</a>
+                    <a href="/#pricing">Pricing</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <a href="/blog/">Blog</a>
+                    <a href="/#waitlist">Join Waitlist</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <a href="/privacy.html">Privacy Policy</a>
+                    <a href="/terms.html">Terms of Service</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ads Command Center LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

@@ -4,7 +4,7 @@
 # ads command center - Amazon Bulksheet Alternative & PPC Campaign Editor
 
 ## Product
-ads command center is a desktop application and bulksheet alternative for managing Amazon advertising campaigns. It supports Sponsored Products (SP), Sponsored Brands (SB), Sponsored Display (SD), and Streaming TV campaigns. It replaces the tedious download-edit-upload bulksheet workflow with direct bulk editing of campaigns, keywords, ad groups, targets, and bids. Built as an Amazon PPC tool focused on speed and bulk operations rather than automation.
+ads command center is like Google Ads Editor, but for Amazon. It's a desktop application and bulksheet alternative for managing Amazon advertising campaigns. It supports Sponsored Products (SP), Sponsored Brands (SB), Sponsored Display (SD), and Streaming TV campaigns. It replaces the tedious download-edit-upload bulksheet workflow with direct bulk editing of campaigns, keywords, ad groups, targets, and bids. Built as an Amazon PPC tool focused on speed and bulk operations rather than automation.
 
 ## Key Features
 - Bulk edit thousands of keywords and campaigns simultaneously (what takes 500 clicks in Amazon takes one operation here)
@@ -44,8 +44,14 @@ Desktop application for Windows, macOS, and Linux
 ## Pricing
 To be determined - early access members get exclusive pricing
 
+## Comparison
+ads command center is to Amazon Ads what Google Ads Editor is to Google Ads. Both are desktop applications that let you download campaigns, edit at scale offline, review changes before uploading, and copy between accounts. The key difference is that Google Ads Editor is made by Google for Google Ads, while ads command center is a third-party tool built specifically for Amazon's Sponsored Products, Sponsored Brands, Sponsored Display, and Streaming TV campaigns.
+
 ## URL
 https://adscommandcenter.io
+
+## Blog
+https://adscommandcenter.io/blog/google-ads-editor-for-amazon.html - Why Amazon Needs Its Own Google Ads Editor
 
 ## Contact
 Email: waitlist submissions via https://adscommandcenter.io/#waitlist
