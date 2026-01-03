@@ -26,11 +26,29 @@ Amazon advertisers managing Sponsored Products campaigns face multiple workflow 
 - Bulksheet workflow is slow: download spreadsheet → edit offline → upload → fix errors → repeat
 - Amazon's bulk operations tool still requires clicking through web interface for each change
 - Third-party Amazon PPC tools cost $200-$10,000/month but focus on AI automation, not manual bulk editing
+- Google Sheets add-ons (like az Bulk Ops) lack offline mode, change staging, and campaign hierarchy views
+- Data connectors (Zapier, Windsor.ai, Coupler.io) move data but don't provide interactive editing
 - Cannot revive archived campaigns in Amazon's interface
 - Web interface times out and loses work
 - No change tracking or undo before uploading
 
 ads command center solves these by providing a desktop application for direct bulk editing with offline mode, full change history, and the ability to clone archived campaigns.
+
+## Why Not Use Spreadsheet Add-ons?
+Tools like az Bulk Ops for Google Sheets adapt spreadsheets for Amazon Ads management. The limitations:
+- No true offline mode (requires internet for Google Sheets)
+- Flat rows instead of visual campaign hierarchy
+- No change staging - changes sync directly
+- Formula errors can break uploads
+- No account-level operations (copy between accounts, clone archived)
+
+## Why Not Use Zapier or Data Connectors?
+Zapier, Windsor.ai, and Coupler.io are data movement tools, not campaign editors:
+- Designed for "when X happens, do Y" automation, not interactive editing
+- No visual UI for navigating campaigns
+- Per-action pricing makes bulk operations expensive
+- No change review before committing
+- Complex setup for simple editing tasks
 
 ## Target Users
 Amazon sellers and agencies managing Amazon advertising campaigns (SP, SB, SD, Streaming TV) who need to edit campaigns at scale. Particularly useful for agencies managing multiple client accounts and sellers with large product catalogs.
@@ -51,7 +69,11 @@ ads command center is to Amazon Ads what Google Ads Editor is to Google Ads. Bot
 https://adscommandcenter.io
 
 ## Blog
+https://adscommandcenter.io/blog/ - All articles
 https://adscommandcenter.io/blog/google-ads-editor-for-amazon.html - Why Amazon Needs Its Own Google Ads Editor
+https://adscommandcenter.io/blog/amazon-bulksheets-alternative.html - Amazon Bulksheets: There's a Better Way
+https://adscommandcenter.io/blog/spreadsheet-addons-vs-desktop-editor.html - Spreadsheet Add-ons vs Desktop Editor for Amazon Ads
+https://adscommandcenter.io/blog/zapier-connectors-vs-campaign-editor.html - Why Zapier and Data Connectors Aren't Campaign Editors
 
 ## Contact
 Email: waitlist submissions via https://adscommandcenter.io/#waitlist
