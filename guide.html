@@ -191,6 +191,7 @@
                                 <li><a href="#connecting-account">Connecting Your Amazon Account</a></li>
                                 <li><a href="#interface-overview">Interface Overview</a></li>
                                 <li><a href="#downloading-data">Downloading Campaign Data</a></li>
+                                <li><a href="#importing-data">Importing from Bulk Sheet / CSV</a></li>
                             </ol>
                         </li>
                         <li><a href="#navigation">Navigation & Entity Tree</a>
@@ -370,6 +371,55 @@
                                 <div class="warning-icon">⚠️</div>
                                 <div class="warning-content">
                                     <strong>Important:</strong> Downloading will refresh your local data. Any pending changes will be preserved, but if you've made changes to entities that were also modified in Amazon, you'll see the Amazon version.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="importing-data" class="guide-subsection">
+                            <h3>Importing from Bulk Sheet / CSV</h3>
+                            <p>Already have an Amazon bulk sheet export? Import it directly instead of downloading from the API.</p>
+
+                            <h4>Opening the Import Tool</h4>
+                            <ol class="numbered-list">
+                                <li>Click <strong>TOOLS</strong> in the header</li>
+                                <li>Select <strong>Import CSV / Bulk Sheet</strong></li>
+                                <li>The import dialog opens with file selection</li>
+                            </ol>
+
+                            <h4>Supported File Formats</h4>
+                            <ul class="feature-list">
+                                <li><strong>Amazon Bulk Sheets (.xlsx):</strong> Direct exports from Amazon Advertising Console</li>
+                                <li><strong>CSV Files (.csv):</strong> Comma or tab-separated data files</li>
+                                <li><strong>Excel Files (.xls, .xlsx):</strong> Standard spreadsheet files</li>
+                            </ul>
+
+                            <h4>What Gets Imported</h4>
+                            <p>The import tool automatically detects and categorizes all entity types from your bulk sheet:</p>
+                            <ul class="feature-list">
+                                <li><strong>Campaigns:</strong> SP, SB, and SD campaigns with all settings</li>
+                                <li><strong>Ad Groups:</strong> Ad groups with bids and states</li>
+                                <li><strong>Keywords:</strong> Keywords with bids and match types</li>
+                                <li><strong>Product Ads:</strong> ASINs/SKUs for SP campaigns</li>
+                                <li><strong>Product Targets:</strong> ASIN and category targeting</li>
+                                <li><strong>Negative Keywords:</strong> Both ad group and campaign level</li>
+                                <li><strong>SB Ads:</strong> Product Collection, Video, and Store Spotlight ads</li>
+                            </ul>
+
+                            <h4>Import Process</h4>
+                            <ol class="numbered-list">
+                                <li>Click <strong>Browse for File</strong> and select your bulk sheet</li>
+                                <li>The tool analyzes the file and shows detected entities</li>
+                                <li>Use checkboxes to select which entity types to import</li>
+                                <li>Click <strong>Import Selected</strong> to load the data</li>
+                            </ol>
+
+                            <h4>Deduplication</h4>
+                            <p>The import tool automatically skips entities that already exist in the app (matched by ID). This prevents duplicate campaigns when importing updated bulk sheets.</p>
+
+                            <div class="tip-box">
+                                <div class="tip-icon">💡</div>
+                                <div class="tip-content">
+                                    <strong>Pro Tip:</strong> Use bulk sheet import to quickly load an existing account structure, then use the app to make edits more efficiently than working in spreadsheets. Changes can be uploaded directly to Amazon.
                                 </div>
                             </div>
                         </div>
