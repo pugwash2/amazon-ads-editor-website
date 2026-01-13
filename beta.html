@@ -184,18 +184,18 @@
                         Get Download Link
                     </button>
                 </form>
-                <p class="version-info">Version <strong>1.0.0-beta.5</strong> &bull; Windows 10/11</p>
+                <p class="version-info">Version <strong>1.0.0-beta.40</strong> &bull; Windows 10/11</p>
             </div>
 
             <!-- Download section (hidden until email submitted) -->
             <div id="downloadSection" style="display: none;">
-                <a id="downloadBtn" href="https://github.com/pugwash2/ads-command-center-releases/releases/latest/download/ads.command.center.Setup.1.0.0-beta.5.exe" class="download-btn">
+                <a id="downloadBtn" href="https://github.com/pugwash2/ads-command-center-releases/releases/latest/download/ads.command.center.Setup.1.0.0-beta.40.exe" class="download-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                     </svg>
                     Download for Windows
                 </a>
-                <p class="version-info">Version <strong>1.0.0-beta.5</strong> &bull; Windows 10/11</p>
+                <p class="version-info">Version <strong>1.0.0-beta.40</strong> &bull; Windows 10/11</p>
                 <p style="color: rgba(255,255,255,0.5); margin-top: 1rem; font-size: 0.9rem;">Welcome, <span id="userEmail"></span>!</p>
             </div>
 
@@ -262,7 +262,7 @@
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         email: email,
-                        version: '1.0.0-beta.5',
+                        version: '1.0.0-beta.40',
                         timestamp: new Date().toISOString()
                     })
                 });
