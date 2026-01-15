@@ -214,6 +214,190 @@
         .back-link:hover {
             color: #00d9ff;
         }
+        /* UI Mockup Styles */
+        .ui-mockup {
+            background: #0d1117;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 2rem 0;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        }
+        .mockup-header {
+            background: linear-gradient(135deg, #1c2128 0%, #161b22 100%);
+            padding: 12px 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .mockup-header-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #f59e0b;
+        }
+        .mockup-header-title {
+            color: #e6edf3;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .mockup-body {
+            padding: 24px;
+        }
+        .mockup-input-group {
+            margin-bottom: 16px;
+        }
+        .mockup-label {
+            color: #8b949e;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 6px;
+            display: block;
+        }
+        .mockup-input {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 10px 12px;
+            color: #c9d1d9;
+            font-family: inherit;
+            font-size: 0.9rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .mockup-textarea {
+            min-height: 80px;
+            resize: none;
+        }
+        .mockup-select {
+            background: #161b22 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%238b949e' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E") no-repeat right 8px center;
+            background-size: 20px;
+            appearance: none;
+            padding-right: 32px;
+        }
+        .mockup-btn {
+            background: linear-gradient(135deg, #00d9ff 0%, #00b4d8 100%);
+            color: #000;
+            font-weight: 600;
+            padding: 10px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            margin-top: 8px;
+        }
+        .mockup-score-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        .mockup-score-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 16px;
+            text-align: center;
+        }
+        .mockup-score-card.overall {
+            border-color: rgba(0, 217, 255, 0.3);
+            background: rgba(0, 217, 255, 0.05);
+        }
+        .mockup-score-value {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #10b981;
+            line-height: 1;
+        }
+        .mockup-score-value.good { color: #10b981; }
+        .mockup-score-value.medium { color: #f59e0b; }
+        .mockup-score-value.poor { color: #ef4444; }
+        .mockup-score-label {
+            font-size: 0.7rem;
+            color: #8b949e;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 4px;
+        }
+        .mockup-tabs {
+            display: flex;
+            gap: 4px;
+            border-bottom: 1px solid #30363d;
+            margin-bottom: 16px;
+        }
+        .mockup-tab {
+            padding: 8px 16px;
+            color: #8b949e;
+            font-size: 0.85rem;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            margin-bottom: -1px;
+        }
+        .mockup-tab.active {
+            color: #00d9ff;
+            border-bottom-color: #00d9ff;
+        }
+        .mockup-qa-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 6px;
+            margin-bottom: 8px;
+        }
+        .mockup-qa-icon {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            flex-shrink: 0;
+        }
+        .mockup-qa-icon.can { background: rgba(16, 185, 129, 0.2); color: #10b981; }
+        .mockup-qa-icon.cannot { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
+        .mockup-qa-text {
+            font-size: 0.9rem;
+            color: #c9d1d9;
+        }
+        .mockup-rec-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 6px;
+            margin-bottom: 8px;
+        }
+        .mockup-rec-priority {
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            flex-shrink: 0;
+        }
+        .mockup-rec-priority.high { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
+        .mockup-rec-priority.medium { background: rgba(245, 158, 11, 0.2); color: #f59e0b; }
+        .mockup-rec-text {
+            font-size: 0.9rem;
+            color: #c9d1d9;
+        }
+        @media (max-width: 768px) {
+            .mockup-score-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .mockup-score-card.overall {
+                grid-column: span 2;
+            }
+        }
         .logo {
             display: flex;
             align-items: center;
@@ -337,6 +521,31 @@
 
         <p>We built the <strong>Rufus Readiness Analyzer</strong> to help you optimize listings for this new reality. It's now available in ads command center as a free PowerTool.</p>
 
+        <!-- Input Form Mockup -->
+        <div class="ui-mockup">
+            <div class="mockup-header">
+                <div class="mockup-header-dot"></div>
+                <span class="mockup-header-title">RUFUS READINESS ANALYZER</span>
+            </div>
+            <div class="mockup-body">
+                <div class="mockup-input-group">
+                    <label class="mockup-label">Product Title</label>
+                    <div class="mockup-input">Organic Ethiopian Yirgacheffe Coffee Beans - Medium Roast, Single Origin, Fair Trade Certified, 2lb Bag</div>
+                </div>
+                <div class="mockup-input-group">
+                    <label class="mockup-label">Bullet Points</label>
+                    <div class="mockup-input mockup-textarea" style="height: 100px; line-height: 1.6;">SINGLE ORIGIN ETHIOPIAN - 100% Arabica beans from Yirgacheffe region<br>MEDIUM ROAST - Balanced flavor with bright citrus and floral notes<br>FAIR TRADE CERTIFIED - Ethically sourced, supporting local farmers<br>FRESH ROASTED - Roasted in small batches, shipped within 48 hours</div>
+                </div>
+                <div style="display: flex; gap: 16px; align-items: flex-end;">
+                    <div class="mockup-input-group" style="flex: 1; margin-bottom: 0;">
+                        <label class="mockup-label">Category</label>
+                        <div class="mockup-input mockup-select">Coffee & Tea</div>
+                    </div>
+                    <button class="mockup-btn">ANALYZE</button>
+                </div>
+            </div>
+        </div>
+
         <div class="feature-grid">
             <div class="feature-card">
                 <h4>Overall Score</h4>
@@ -388,6 +597,89 @@
         </ol>
 
         <p>You'll get immediate scores across five dimensions, plus prioritized recommendations for improvement.</p>
+
+        <!-- Results Mockup -->
+        <div class="ui-mockup">
+            <div class="mockup-header">
+                <div class="mockup-header-dot"></div>
+                <span class="mockup-header-title">ANALYSIS RESULTS</span>
+            </div>
+            <div class="mockup-body">
+                <div class="mockup-score-grid">
+                    <div class="mockup-score-card overall">
+                        <div class="mockup-score-value good">B+</div>
+                        <div class="mockup-score-label">Overall</div>
+                    </div>
+                    <div class="mockup-score-card">
+                        <div class="mockup-score-value good">85</div>
+                        <div class="mockup-score-label">Attributes</div>
+                    </div>
+                    <div class="mockup-score-card">
+                        <div class="mockup-score-value medium">72</div>
+                        <div class="mockup-score-label">Q&A</div>
+                    </div>
+                    <div class="mockup-score-card">
+                        <div class="mockup-score-value good">90</div>
+                        <div class="mockup-score-label">Complete</div>
+                    </div>
+                    <div class="mockup-score-card">
+                        <div class="mockup-score-value good">88</div>
+                        <div class="mockup-score-label">Clarity</div>
+                    </div>
+                </div>
+
+                <div class="mockup-tabs">
+                    <div class="mockup-tab active">Recommendations</div>
+                    <div class="mockup-tab">Q&A Analysis</div>
+                    <div class="mockup-tab">Attributes</div>
+                </div>
+
+                <div class="mockup-rec-item">
+                    <span class="mockup-rec-priority high">High</span>
+                    <span class="mockup-rec-text">Add caffeine content - Rufus cannot answer "How much caffeine?"</span>
+                </div>
+                <div class="mockup-rec-item">
+                    <span class="mockup-rec-priority high">High</span>
+                    <span class="mockup-rec-text">Specify grind type or add "whole bean" - Rufus cannot answer "Is this ground or whole bean?"</span>
+                </div>
+                <div class="mockup-rec-item">
+                    <span class="mockup-rec-priority medium">Medium</span>
+                    <span class="mockup-rec-text">Add brewing method recommendations for optimal flavor extraction</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q&A Analysis Mockup -->
+        <div class="ui-mockup">
+            <div class="mockup-header">
+                <div class="mockup-header-dot"></div>
+                <span class="mockup-header-title">Q&A ANALYSIS</span>
+            </div>
+            <div class="mockup-body">
+                <p style="color: #8b949e; font-size: 0.85rem; margin-bottom: 16px;">Questions Rufus shoppers ask about coffee products:</p>
+
+                <div class="mockup-qa-item">
+                    <span class="mockup-qa-icon can">&#10003;</span>
+                    <span class="mockup-qa-text">"What roast level is this?" - <strong style="color: #10b981;">Can answer:</strong> Medium Roast</span>
+                </div>
+                <div class="mockup-qa-item">
+                    <span class="mockup-qa-icon can">&#10003;</span>
+                    <span class="mockup-qa-text">"Where is this coffee from?" - <strong style="color: #10b981;">Can answer:</strong> Ethiopian Yirgacheffe, Single Origin</span>
+                </div>
+                <div class="mockup-qa-item">
+                    <span class="mockup-qa-icon can">&#10003;</span>
+                    <span class="mockup-qa-text">"What does this coffee taste like?" - <strong style="color: #10b981;">Can answer:</strong> Citrus and floral notes</span>
+                </div>
+                <div class="mockup-qa-item">
+                    <span class="mockup-qa-icon cannot">&#10007;</span>
+                    <span class="mockup-qa-text">"How much caffeine does this have?" - <strong style="color: #ef4444;">Cannot answer</strong></span>
+                </div>
+                <div class="mockup-qa-item">
+                    <span class="mockup-qa-icon cannot">&#10007;</span>
+                    <span class="mockup-qa-text">"Is this ground or whole bean?" - <strong style="color: #ef4444;">Cannot answer</strong></span>
+                </div>
+            </div>
+        </div>
 
         <h2>Actionable Recommendations</h2>
 
