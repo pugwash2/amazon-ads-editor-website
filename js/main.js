@@ -197,3 +197,34 @@ revealElements.forEach(el => {
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     revealObserver.observe(el);
 });
+
+// Video Player Controls
+const heroVideo = document.getElementById('heroVideo');
+const videoPlayBtn = document.getElementById('videoPlayBtn');
+
+if (heroVideo && videoPlayBtn) {
+    videoPlayBtn.addEventListener('click', () => {
+        if (heroVideo.paused) {
+            heroVideo.play();
+            videoPlayBtn.classList.add('hidden');
+            heroVideo.controls = true;
+        }
+    });
+
+    heroVideo.addEventListener('play', () => {
+        videoPlayBtn.classList.add('hidden');
+    });
+
+    heroVideo.addEventListener('pause', () => {
+        if (heroVideo.currentTime < heroVideo.duration) {
+            videoPlayBtn.classList.remove('hidden');
+            heroVideo.controls = false;
+        }
+    });
+
+    heroVideo.addEventListener('ended', () => {
+        videoPlayBtn.classList.remove('hidden');
+        heroVideo.controls = false;
+        heroVideo.currentTime = 0;
+    });
+}

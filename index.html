@@ -67,6 +67,29 @@
     }
     </script>
 
+    <!-- Structured Data - Video -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "name": "Ads Command Center Demo - Bulk Editing for Amazon Ads",
+      "description": "See how Ads Command Center replaces Amazon bulksheets with a powerful desktop app for bulk editing Sponsored Products campaigns.",
+      "thumbnailUrl": "https://adscommandcenter.io/images/hero-main.png",
+      "uploadDate": "2026-01-20",
+      "contentUrl": "https://adscommandcenter.io/video/acc-demo.mp4",
+      "embedUrl": "https://adscommandcenter.io/video/acc-demo.mp4",
+      "duration": "PT36S",
+      "publisher": {
+        "@type": "Organization",
+        "name": "ads command center",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://adscommandcenter.io/images/hero-main.png"
+        }
+      }
+    }
+    </script>
+
     <!-- Structured Data - FAQ -->
     <script type="application/ld+json">
     {
@@ -211,10 +234,10 @@
         </div>
     </section>
 
-    <!-- Screenshot Hero -->
-    <section class="screenshot-hero">
+    <!-- Video Demo Section -->
+    <section class="video-hero">
         <div class="container">
-            <div class="screenshot-window">
+            <div class="video-window">
                 <div class="window-chrome">
                     <div class="window-dots">
                         <span></span>
@@ -223,11 +246,19 @@
                     </div>
                     <div class="window-title">ads command center</div>
                 </div>
-                <div class="screenshot-container">
-                    <img src="images/hero-main.png" alt="ads command center main interface" class="screenshot-img">
+                <div class="video-container">
+                    <video id="heroVideo" class="hero-video" poster="images/hero-main.png" preload="metadata" playsinline>
+                        <source src="video/acc-demo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <button class="video-play-btn" id="videoPlayBtn" aria-label="Play video">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </button>
                 </div>
             </div>
-            <p class="screenshot-caption">Screenshot from Ads Command Center (prototype UI). Not an Amazon product.</p>
+            <p class="video-caption">See Ads Command Center in action. Not an Amazon product.</p>
         </div>
     </section>
 
