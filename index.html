@@ -36,8 +36,9 @@
       "operatingSystem": "Windows, macOS, Linux",
       "offers": {
         "@type": "Offer",
-        "price": "TBD",
-        "priceCurrency": "USD"
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Free download with read-only access. Pro subscription $29/month for upload capabilities."
       },
       "description": "Desktop application for managing Amazon Sponsored Products campaigns. Edit thousands of keywords instantly, work offline with full change tracking, revive archived campaigns, and automate repetitive campaign management tasks.",
       "featureList": [
@@ -138,10 +139,10 @@
         },
         {
           "@type": "Question",
-          "name": "When will ads command center be available?",
+          "name": "How much does ads command center cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "ads command center is coming soon. Join the waitlist at https://adscommandcenter.io to get early access, exclusive pricing, and priority support."
+            "text": "ads command center is free to download and use for browsing, analyzing, and planning campaign changes. Uploading changes to Amazon requires a Pro subscription at $29/month."
           }
         }
       ]
@@ -176,7 +177,7 @@
                 <a href="#screenshots">Screenshots</a>
                 <a href="/guide.html">Guide</a>
                 <a href="#pricing">Pricing</a>
-                <a href="#waitlist" class="btn-primary-nav">Join Waitlist</a>
+                <a href="/download.html" class="btn-primary-nav">Download</a>
             </div>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <span></span>
@@ -191,19 +192,19 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-badge animate-fade-in">
-                    <span class="badge-text">COMING SOON</span>
+                    <span class="badge-text">AVAILABLE NOW</span>
                 </div>
                 <h1 class="hero-title animate-slide-up" itemprop="headline">
                     Say Goodbye to
                     <span class="gradient-text">Bulksheets</span>
                 </h1>
                 <p class="hero-description animate-slide-up" style="animation-delay: 0.1s;">
-                    Desktop app for bulk editing Amazon Sponsored Products.<br>
-                    What takes hours in bulksheets takes minutes.
+                    Desktop app for bulk editing Amazon Ads.<br>
+                    SP, SB, SD, and STV campaigns — what takes hours takes minutes.
                 </p>
                 <div class="hero-cta animate-slide-up" style="animation-delay: 0.2s;">
-                    <a href="#waitlist" class="btn-large btn-primary">
-                        Get Early Access
+                    <a href="/download.html" class="btn-large btn-primary">
+                        Download Free
                     </a>
                 </div>
 
@@ -522,41 +523,59 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Pricing</h2>
-                <p class="section-description">Professional tools for professional advertisers</p>
+                <p class="section-description">Download free. Subscribe when you're ready to push changes live.</p>
             </div>
-            <div class="pricing-card">
-                <div class="pricing-header">
-                    <div class="pricing-badge">COMING SOON</div>
-                    <h3 class="pricing-title">Professional License</h3>
-                    <div class="pricing-price">
-                        <span class="price-amount">TBD</span>
-                        <span class="price-period">/month</span>
+            <div class="pricing-grid">
+                <div class="pricing-card pricing-card--free">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Free</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">$0</span>
+                            <span class="price-period">/ forever</span>
+                        </div>
                     </div>
+                    <div class="pricing-features">
+                        <div class="pricing-feature">Download all campaigns &amp; data</div>
+                        <div class="pricing-feature">Browse &amp; analyze performance</div>
+                        <div class="pricing-feature">Search term reports &amp; metrics</div>
+                        <div class="pricing-feature">Plan changes offline</div>
+                        <div class="pricing-feature">All read-only tools included</div>
+                    </div>
+                    <a href="/download.html" class="pricing-cta pricing-cta--free">Download Free</a>
                 </div>
-                <div class="pricing-features">
-                    <div class="pricing-feature">All features included</div>
-                    <div class="pricing-feature">Unlimited Sponsored Products campaigns</div>
-                    <div class="pricing-feature">Offline mode with change tracking</div>
-                    <div class="pricing-feature">Advanced campaign tools</div>
-                    <div class="pricing-feature">Priority support</div>
-                    <div class="pricing-feature">Regular updates</div>
+                <div class="pricing-card pricing-card--pro">
+                    <div class="pricing-header">
+                        <div class="pricing-badge">RECOMMENDED</div>
+                        <h3 class="pricing-title">Pro</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">$29</span>
+                            <span class="price-period">/ month</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="pricing-feature">Everything in Free, plus:</div>
+                        <div class="pricing-feature pricing-feature--highlight">Upload changes to Amazon</div>
+                        <div class="pricing-feature pricing-feature--highlight">Bulk edit bids, status &amp; keywords</div>
+                        <div class="pricing-feature pricing-feature--highlight">Create &amp; duplicate campaigns</div>
+                        <div class="pricing-feature pricing-feature--highlight">Account copy tool</div>
+                        <div class="pricing-feature">Priority support</div>
+                    </div>
+                    <a href="/download.html" class="pricing-cta pricing-cta--pro">Download &amp; Subscribe</a>
+                    <p class="pricing-note">Subscribe from within the app after downloading.</p>
                 </div>
-                <p class="pricing-note">Join the waitlist for early access pricing and exclusive launch benefits.</p>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist -->
-    <section id="waitlist" class="waitlist">
+    <!-- Download CTA -->
+    <section id="download" class="waitlist">
         <div class="container">
             <div class="waitlist-content">
-                <h2 class="waitlist-title">Join Early Access</h2>
-                <p class="waitlist-description">Be the first to know when ads command center launches. Early access members get exclusive pricing and priority support.</p>
-                <form class="waitlist-form" id="waitlistForm">
-                    <input type="email" id="emailInput" placeholder="your@email.com" class="waitlist-input" required>
-                    <button type="submit" class="btn-large btn-primary">Join Waitlist</button>
-                </form>
-                <p class="waitlist-privacy">We respect your privacy. No spam, unsubscribe anytime.</p>
+                <h2 class="waitlist-title">Ready to Take Control?</h2>
+                <p class="waitlist-description">Download free. Browse your campaigns. Subscribe when you're ready to make changes.</p>
+                <div class="hero-cta">
+                    <a href="/download.html" class="btn-large btn-primary">Download for Windows</a>
+                </div>
             </div>
         </div>
     </section>
@@ -583,7 +602,7 @@
                     <div class="footer-section">
                         <h4>Resources</h4>
                         <a href="/blog/">Blog</a>
-                        <a href="#waitlist">Join Waitlist</a>
+                        <a href="/download.html">Download</a>
                     </div>
                     <div class="footer-section">
                         <h4>Legal</h4>
@@ -599,7 +618,7 @@
                     <p>Contact: <a href="mailto:david@adscommandcenter.io">david@adscommandcenter.io</a></p>
                 </div>
                 <div class="footer-disclaimer">
-                    <p>&copy; 2025 Ads Command Center LLC. All rights reserved.</p>
+                    <p>&copy; 2026 Ads Command Center LLC. All rights reserved.</p>
                     <p class="amazon-disclaimer">This tool is not affiliated with, endorsed by, or sponsored by Amazon.com, Inc. or its affiliates. Amazon, Amazon Ads, and Sponsored Products are trademarks of Amazon.com, Inc.</p>
                 </div>
             </div>

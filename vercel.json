@@ -1,4 +1,16 @@
 {
+  "redirects": [
+    {
+      "source": "/beta.html",
+      "destination": "/download.html",
+      "permanent": true
+    },
+    {
+      "source": "/beta",
+      "destination": "/download.html",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
