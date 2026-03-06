@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeffs Digital Collectables</title>
+  <meta name="description" content="Curated digital collectibles from Jeff's personal collection. Verified on the WAX blockchain.">
+  <meta property="og:title" content="Jeffs Digital Collectables">
+  <meta property="og:description" content="Curated digital collectibles from Jeff's personal collection. Verified on the WAX blockchain.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="site-nav" id="site-nav">
+    <a href="/collectables" class="nav-brand">
+      <div class="nav-brand-icon">J</div>
+      <span class="nav-brand-text">Jeffs Digital Collectables</span>
+    </a>
+    <div class="nav-wallet">1.prg.wam</div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      Verified on WAX Blockchain
+    </div>
+    <h1>Jeffs Digital<br><span>Collectables</span></h1>
+    <p class="hero-sub">
+      A hand-picked selection of digital collectibles from Jeff's personal vault.
+      Every item is blockchain-verified and available for direct purchase.
+    </p>
+    <div class="hero-stats" id="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-value" id="stat-available">--</div>
+        <div class="hero-stat-label">Available</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-value" id="stat-collections">--</div>
+        <div class="hero-stat-label">Collections</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-value" id="stat-total">--</div>
+        <div class="hero-stat-label">In Vault</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLECTION -->
+  <section class="section" id="collection-section">
+    <div class="section-header">
+      <div class="section-label">Available Now</div>
+      <h2 class="section-title">The Collection</h2>
+      <p class="section-subtitle">Each piece is held in Jeff's personal wallet until sold.</p>
+    </div>
+
+    <div id="collection-state">
+      <div class="state-message">
+        <div class="loading-spinner"></div>
+        <h3>Loading collection...</h3>
+        <p>Fetching live data from the WAX blockchain</p>
+      </div>
+    </div>
+
+    <div class="collection-grid" id="collection-grid" style="display:none;"></div>
+  </section>
+
+  <!-- HOW TO BUY -->
+  <section class="section">
+    <div class="section-header">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title">Buying From Jeff</h2>
+    </div>
+    <div class="how-grid">
+      <div class="how-card">
+        <div class="how-number">1</div>
+        <h3>Browse</h3>
+        <p>Look through the available pieces above. Every item listed here is currently held in Jeff's wallet and ready to transfer.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-number">2</div>
+        <h3>Enquire</h3>
+        <p>Found something you want? Hit the enquire button on any item. Jeff will confirm availability and arrange the details directly.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-number">3</div>
+        <h3>Collect</h3>
+        <p>Once payment is confirmed, the item transfers straight to your WAX wallet. Ownership is recorded permanently on-chain.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-brand">Jeffs Digital Collectables</div>
+    <div class="footer-note">All items verified on the WAX blockchain. Ownership is transparent and permanent.</div>
+    <div class="footer-copy">&copy; 2026 Jeffs Digital Collectables</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

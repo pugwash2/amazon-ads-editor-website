@@ -1,4 +1,14 @@
 {
+  "rewrites": [
+    {
+      "source": "/collectables",
+      "destination": "/collectables/index.html"
+    },
+    {
+      "source": "/collectables/debug",
+      "destination": "/collectables/debug.html"
+    }
+  ],
   "redirects": [
     {
       "source": "/beta.html",
