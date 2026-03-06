@@ -45,7 +45,7 @@
   function showEmpty() {
     stateEl.innerHTML =
       '<div class="state-message">' +
-      '<h3>No items currently listed</h3>' +
+      '<h3>No items currently in the vault</h3>' +
       '<p>Check back soon. Jeff adds new pieces regularly.</p>' +
       '</div>';
     stateEl.style.display = '';
@@ -59,12 +59,17 @@
   }
 
   function buildCard(item) {
-    var name = item.listing.title_override || item.asset.name;
-    var imageUrl = item.asset.image_url;
-    var collection = item.asset.collection_display || item.asset.collection_name;
-    var price = item.listing.price || '';
-    var note = item.listing.note || '';
-    var assetId = item.asset.asset_id;
+    var listing = item.listing || {};
+    var asset = item.asset;
+    var name = listing.title_override || asset.name;
+    var imageUrl = asset.image_url;
+    var collection = asset.collection_display || asset.collection_name;
+    var price = listing.price || '';
+    var note = listing.note || '';
+    var assetId = asset.asset_id;
+    var hidden = listing.status === 'hidden';
+
+    if (hidden) return '';
 
     var imageHtml;
     if (imageUrl) {
@@ -78,8 +83,6 @@
 
     var noteHtml = note ? '<div class="card-note">' + escapeHtml(note) + '</div>' : '';
 
-    var contactMethod = 'Enquire';
-
     return (
       '<div class="card">' +
       '  <div class="card-image-wrap">' + imageHtml + '</div>' +
@@ -90,7 +93,7 @@
       noteHtml +
       '    <div class="card-footer">' +
       (price ? '      <div class="card-price">' + escapeHtml(price) + '</div>' : '<div></div>') +
-      '      <a href="#how-to-buy" class="card-cta">' + contactMethod + '</a>' +
+      '      <a href="#how-to-buy" class="card-cta">Enquire</a>' +
       '    </div>' +
       '  </div>' +
       '</div>'
@@ -116,7 +119,13 @@
 
   // ---- Main ----
   function init() {
-    Promise.all([fetchJSON(WAX_API_URL), fetchJSON(LISTINGS_URL)])
+    // Fetch wallet data first, listings.json is optional (for price/note overrides)
+    var waxPromise = fetchJSON(WAX_API_URL);
+    var listingsPromise = fetchJSON(LISTINGS_URL).catch(function () {
+      return { listings: [] };
+    });
+
+    Promise.all([waxPromise, listingsPromise])
       .then(function (results) {
         var waxData = results[0];
         var listingsData = results[1];
@@ -127,44 +136,46 @@
         }
 
         var assets = waxData.assets;
-        var listings = (listingsData.listings || []).filter(function (l) {
-          return l.status === 'for_sale';
+
+        // Build listing overrides lookup by asset_id
+        var listingMap = {};
+        (listingsData.listings || []).forEach(function (l) {
+          listingMap[l.asset_id] = l;
         });
 
-        // Build asset lookup
-        var assetMap = {};
-        assets.forEach(function (a) {
-          assetMap[a.asset_id] = a;
+        // Show ALL wallet assets. Merge with listing overrides if they exist.
+        var items = assets.map(function (asset) {
+          return {
+            asset: asset,
+            listing: listingMap[asset.asset_id] || {}
+          };
         });
 
-        // Match: only items that are for_sale AND still in wallet
-        var matched = [];
-        listings.forEach(function (listing) {
-          var asset = assetMap[listing.asset_id];
-          if (asset) {
-            matched.push({ asset: asset, listing: listing });
-          }
+        // Filter out items explicitly marked as hidden
+        items = items.filter(function (item) {
+          return item.listing.status !== 'hidden';
         });
 
-        // Sort by sort_order
-        matched.sort(function (a, b) {
-          return (a.listing.sort_order || 999) - (b.listing.sort_order || 999);
+        // Sort: items with sort_order come first, then by asset_id descending
+        items.sort(function (a, b) {
+          var aOrder = a.listing.sort_order;
+          var bOrder = b.listing.sort_order;
+          var aHas = typeof aOrder === 'number';
+          var bHas = typeof bOrder === 'number';
+          if (aHas && bHas) return aOrder - bOrder;
+          if (aHas) return -1;
+          if (bHas) return 1;
+          return b.asset.asset_id.localeCompare(a.asset.asset_id);
         });
 
-        // Collect unique collection names from matched items
-        var collectionNames = new Set();
-        matched.forEach(function (m) {
-          if (m.asset.collection_name) collectionNames.add(m.asset.collection_name);
-        });
-
-        // All collection names from wallet for stats
+        // Stats
         var allCollections = new Set();
-        assets.forEach(function (a) {
-          if (a.collection_name) allCollections.add(a.collection_name);
+        items.forEach(function (item) {
+          if (item.asset.collection_name) allCollections.add(item.asset.collection_name);
         });
 
-        updateStats(matched.length, assets.length, allCollections);
-        renderCards(matched);
+        updateStats(items.length, assets.length, allCollections);
+        renderCards(items);
       })
       .catch(function (err) {
         console.error('Failed to load collection:', err);
